@@ -67,5 +67,74 @@
         "state": "active"
       }
     }
+  },
+  "2.1.312": {
+    "version": "2.1.312",
+    "platform": "darwin-arm64",
+    "checkedAt": "2026-10-28T05:40:29.646Z",
+    "safety": "ok",
+    "features": {
+      "rtl": {
+        "state": "active"
+      },
+      "broom": {
+        "state": "active"
+      },
+      "quoteReply": {
+        "state": "active"
+      },
+      "quoteTools": {
+        "state": "active"
+      },
+      "imagePreview": {
+        "state": "active"
+      }
+    }
+  },
+  "2.1.311": {
+    "version": "2.1.311",
+    "platform": "darwin-arm64",
+    "checkedAt": "2026-10-28T05:41:01.533Z",
+    "safety": "ok",
+    "features": {
+      "rtl": {
+        "state": "active"
+      },
+      "broom": {
+        "state": "active"
+      },
+      "quoteReply": {
+        "state": "active"
+      },
+      "quoteTools": {
+        "state": "active"
+      },
+      "imagePreview": {
+        "state": "active"
+      }
+    }
+  },
+  "2.1.310": {
+    "version": "2.1.310",
+    "platform": "darwin-arm64",
+    "checkedAt": "2026-10-28T05:41:35.842Z",
+    "safety": "ok",
+    "features": {
+      "rtl": {
+        "state": "active"
+      },
+      "broom": {
+        "state": "active"
+      },
+      "quoteReply": {
+        "state": "active"
+      },
+      "quoteTools": {
+        "state": "active"
+      },
+      "imagePreview": {
+        "state": "active"
+      }
+    }
   }
 }
