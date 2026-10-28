@@ -1,5 +1,5 @@
 {
-  "description": "Makes the Claude Code chat calmer and more readable: right-to-left text (Arabic, Persian, Urdu, Hebrew and more), a broom that folds tool rows, quote reply and quote tools, and image previews. Not affiliated with Anthropic.",
+  "description": "Makes the Claude Code chat calmer and more readable: right-to-left text (Arabic, Persian, Urdu and more), a broom that folds tool rows, quote reply and quote tools, and image previews. Not affiliated with Anthropic.",
   "command.openPanel": "Open control panel",
   "command.enable": "Turn on right-to-left text",
   "command.enableBroom": "Turn on the broom (fold tool rows)",
@@ -8,7 +8,7 @@
   "view.welcome": "[Open control panel](command:enhancer.openPanel)",
   "config.language": "The language of Enhancer's control panel. Automatic follows the editor's display language, and English when Enhancer does not speak it.",
   "config.languageEverywhere": "Use Enhancer's language in the Claude Code chat (its buttons and labels), the status bar and notifications too. When off, only the control panel changes language.",
-  "config.arabic": "Right-to-left text in the Claude Code chat. Text holding a letter of a right-to-left language (Arabic, Persian, Urdu, Hebrew and others) reads right to left, even when it starts with an English word.",
+  "config.arabic": "Right-to-left text in the Claude Code chat. Text holding a letter of a right-to-left language (Arabic, Persian, Urdu and others) reads right to left, even when it starts with an English word.",
   "config.broom": "A broom button in the Claude Code chat: one click folds tool rows to their header and hides finished thinking, new ones too; another click shows them again. Each tool row also gets its own −/+.",
   "config.broomStartsOn": "The broom is on each time the Claude Code chat opens: tool rows folded and finished thinking hidden. A click on the broom lasts until the chat reloads.",
   "config.broomButton": "Show the broom button in the Claude Code message box. When hidden, each tool row's own −/+ and the broom's start state still work.",

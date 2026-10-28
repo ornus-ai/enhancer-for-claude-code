@@ -54,7 +54,7 @@ These are patch and restore checks: they prove an enhancement fits and undoes cl
 
 ### Right-to-left text
 
-Arabic, Hebrew, Persian, Urdu and the other supported right-to-left scripts read in the right direction. Code and English stay left to right.
+Arabic, Persian, Urdu and the other supported right-to-left scripts read in the right direction. Code and English stay left to right.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/readme/rtl-en-dark.png">
