@@ -58,7 +58,7 @@ Arabic, Hebrew, Persian, Urdu and the other supported right-to-left scripts read
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/readme/rtl-en-dark.png">
-  <img src="assets/readme/rtl-en-light.png" width="560" alt="A Hebrew sentence with an English command, first laid out left to right, then right to left.">
+  <img src="assets/readme/rtl-en-light.png" width="560" alt="An Arabic sentence with an English command, first laid out left to right, then right to left.">
 </picture>
 
 ### The broom
