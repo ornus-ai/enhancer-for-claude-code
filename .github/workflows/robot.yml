@@ -46,12 +46,17 @@ jobs:
           else
             node out/robot/robot.js check --latest 3 2>&1 | tee robot-log.txt
           fi
+          # Hand on only this runner's own table: the checkout's copies of the other
+          # platforms are stale and would overwrite that runner's fresh results.
+          mkdir -p robot-out
+          own="compat/$(node -p 'process.platform + "-" + process.arch').json"
+          if [ -f "$own" ]; then cp "$own" robot-out/; fi
       - if: always()
         uses: actions/upload-artifact@v4
         with:
           name: compat-${{ matrix.os }}
           path: |
-            compat/*.json
+            robot-out/*.json
             robot-log.txt
           if-no-files-found: ignore
 
@@ -75,7 +80,7 @@ jobs:
         run: |
           mkdir -p compat
           for dir in artifacts/compat-*; do
-            [ -d "$dir" ] && cp "$dir"/compat/*.json compat/ 2>/dev/null || true
+            [ -d "$dir" ] && cp "$dir"/robot-out/*.json compat/ 2>/dev/null || true
           done
           node out/robot/robot.js table
           git config user.name 'enhancer-robot'
