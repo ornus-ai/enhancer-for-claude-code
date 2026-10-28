@@ -1,0 +1,31 @@
+# The feedback worker (worker.ts). Deploy from this folder: `npx wrangler deploy`.
+# Secrets (set once, never in this file): TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID —
+# `npx wrangler secret put <NAME>`.
+name = "enhancer-feedback"
+main = "worker.ts"
+compatibility_date = "2026-10-01"
+workers_dev = false
+routes = [{ pattern = "ornus.ai/enhancer/feedback", zone_name = "ornus.ai" }]
+
+# What the worker remembers: recent message fingerprints (repeat filter) and each sender's
+# count for the day (daily cap). Keys expire by themselves.
+[[kv_namespaces]]
+binding = "FEEDBACK_MEMORY"
+id = "060f07c0de0645eeaf9b05b587743861"
+
+# Each sender address: 3 messages a minute.
+[[ratelimits]]
+name = "PER_SENDER"
+namespace_id = "1001"
+  [ratelimits.simple]
+  limit = 3
+  period = 60
+
+# Everyone together: 30 messages a minute. Counted per Cloudflare data centre, so not a
+# strict global cap; Telegram's limit per chat is the hard ceiling (see worker.ts).
+[[ratelimits]]
+name = "ALL_SENDERS"
+namespace_id = "1002"
+  [ratelimits.simple]
+  limit = 30
+  period = 60

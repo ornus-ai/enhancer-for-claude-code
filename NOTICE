@@ -1,0 +1,14 @@
+Enhancer for Claude Code
+Copyright 2026 The Enhancer for Claude Code authors
+
+The source code is licensed under the Apache License, Version 2.0 (see LICENSE).
+
+The name "Enhancer for Claude Code" and the Bubble mascot (the pixel character in
+media/icon.svg, media/icon.png, the mascot drawing in media/panel.js and the pictures
+in assets/) are the project's brand. As section 6 of the license says, it grants no
+permission to use them, except to describe where a work comes from. You may
+redistribute the unmodified extension and use its screenshots to write about it.
+A fork that changes the code must use its own name and its own mascot.
+
+This project is independent and not affiliated with Anthropic. "Claude" and
+"Claude Code" are trademarks of Anthropic, used here only to describe compatibility.

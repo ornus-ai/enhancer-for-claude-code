@@ -1,0 +1,24 @@
+# Only what runs in the editor ships: out/ (without tests, the robot and the feedback worker), media/, package.json.
+src/**
+out/test/**
+out/robot/**
+out/feedbackWorker/**
+out/**/*.map
+compat/**
+# README pictures load from the repository on the store page; their generator is a dev tool.
+assets/**
+scripts/**
+README.ar.md
+video/**
+.ornus/**
+.github/**
+.claude/**
+node_modules/**
+tsconfig.json
+package-lock.json
+PLAN.md
+CLAUDE.md
+.gitignore
+*.vsix
+.env
+.env.*

@@ -1,0 +1,22 @@
+{
+  "description": "Rende la chat di Claude Code più calma e leggibile: testo da destra a sinistra (arabo, persiano, urdu, ebraico e altro), una scopa che comprime le righe degli strumenti, risposta con citazione e strumenti di citazione, e anteprime delle immagini. Non affiliato ad Anthropic.",
+  "command.openPanel": "Apri pannello di controllo",
+  "command.enable": "Attiva il testo da destra a sinistra",
+  "command.enableBroom": "Attiva la scopa (comprimi le righe degli strumenti)",
+  "command.restore": "Ripristina Claude Code originale",
+  "command.status": "Mostra stato",
+  "view.welcome": "[Apri pannello di controllo](command:enhancer.openPanel)",
+  "config.language": "La lingua del pannello di controllo di Enhancer. Automatica segue la lingua di visualizzazione dell'editor, e l'inglese quando Enhancer non la parla.",
+  "config.languageEverywhere": "Usa la lingua di Enhancer anche nella chat di Claude Code (pulsanti ed etichette), nella barra di stato e nelle notifiche. Se disattivato, cambia lingua solo il pannello di controllo.",
+  "config.arabic": "Testo da destra a sinistra nella chat di Claude Code. Il testo che contiene una lettera di una lingua da destra a sinistra (arabo, persiano, urdu, ebraico e altre) si legge da destra a sinistra, anche se inizia con una parola inglese.",
+  "config.broom": "Un pulsante scopa nella chat di Claude Code: un clic comprime le righe degli strumenti sulla loro intestazione e nasconde il ragionamento concluso, anche i nuovi; un altro clic li mostra di nuovo. Ogni riga di strumento ha anche il proprio −/+.",
+  "config.broomStartsOn": "La scopa è attiva a ogni apertura della chat di Claude Code: righe degli strumenti compresse e ragionamento concluso nascosto. Un clic sulla scopa dura fino al ricaricamento della chat.",
+  "config.broomButton": "Mostra il pulsante della scopa nella casella di messaggio di Claude Code. Se nascosto, il −/+ di ogni riga di strumento e lo stato iniziale della scopa continuano a funzionare.",
+  "config.quoteReply": "Seleziona del testo in una risposta di Claude per ottenere Rispondi e Copia. Rispondi mantiene la selezione come scheda sopra la casella di messaggio e la invia come citazione con il tuo prossimo messaggio.",
+  "config.quoteTools": "Pulsanti Copia e Seleziona nell'angolo di ogni citazione nella chat di Claude Code.",
+  "config.imagePreview": "Miniature sotto una riga di strumento per i file immagine che Claude legge, scrive o nomina; fai clic per ingrandire o apri il file nell'editor.",
+  "config.reapplyAfterUpdate": "Applica di nuovo i miglioramenti quando Claude Code si aggiorna o l'editor si avvia. Se disattivato, una nuova versione di Claude Code resta originale finché non la applichi dal pannello di controllo.",
+  "config.checkForUpdates": "Chiede allo store di estensioni del tuo editor (Visual Studio Marketplace o Open VSX) l'ultima versione di Enhancer e lo segnala nel pannello di controllo quando ne esiste una più recente. Non invia nulla su di te.",
+  "config.ornusNews": "Mostra nel pannello di controllo una breve novità di Ornus, che si può chiudere, letta da un piccolo file di testo su ornus.ai. Non invia nulla su di te.",
+  "config.feedbackButton": "Mostra «Invia feedback» nel pannello di controllo. Un messaggio arriva al team di Enhancer solo quando premi Invia, e solo con ciò che mostra il modulo."
+}

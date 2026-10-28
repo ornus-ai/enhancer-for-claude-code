@@ -1,0 +1,22 @@
+{
+  "description": "Giúp cuộc trò chuyện Claude Code êm dịu và dễ đọc hơn: văn bản từ phải sang trái (tiếng Ả Rập, Ba Tư, Urdu, Do Thái và hơn thế), chổi thu gọn các dòng công cụ, trả lời trích dẫn và công cụ trích dẫn, cùng xem trước ảnh. Không liên kết với Anthropic.",
+  "command.openPanel": "Mở bảng điều khiển",
+  "command.enable": "Bật văn bản từ phải sang trái",
+  "command.enableBroom": "Bật chổi (thu gọn các dòng công cụ)",
+  "command.restore": "Khôi phục Claude Code gốc",
+  "command.status": "Hiện trạng thái",
+  "view.welcome": "[Mở bảng điều khiển](command:enhancer.openPanel)",
+  "config.language": "Ngôn ngữ của bảng điều khiển Enhancer. Tự động sẽ theo ngôn ngữ hiển thị của trình soạn thảo, và dùng tiếng Anh khi Enhancer không hỗ trợ ngôn ngữ đó.",
+  "config.languageEverywhere": "Dùng ngôn ngữ của Enhancer cả trong cuộc trò chuyện Claude Code (các nút và nhãn), thanh trạng thái và thông báo. Khi tắt, chỉ bảng điều khiển đổi ngôn ngữ.",
+  "config.arabic": "Văn bản từ phải sang trái trong cuộc trò chuyện Claude Code. Văn bản có chữ cái của ngôn ngữ viết từ phải sang trái (tiếng Ả Rập, Ba Tư, Urdu, Do Thái và các ngôn ngữ khác) sẽ được đọc từ phải sang trái, kể cả khi bắt đầu bằng một từ tiếng Anh.",
+  "config.broom": "Một nút chổi trong cuộc trò chuyện Claude Code: một lần nhấp sẽ thu gọn các dòng công cụ về phần tiêu đề và ẩn phần suy nghĩ đã xong, kể cả phần mới; nhấp lần nữa để hiện lại. Mỗi dòng công cụ cũng có −/+ riêng.",
+  "config.broomStartsOn": "Chổi được bật mỗi khi cuộc trò chuyện Claude Code mở: các dòng công cụ được thu gọn và phần suy nghĩ đã xong bị ẩn. Một lần nhấp vào chổi có hiệu lực cho đến khi cuộc trò chuyện được tải lại.",
+  "config.broomButton": "Hiện nút chổi trong hộp tin nhắn của Claude Code. Khi ẩn, −/+ riêng của từng dòng công cụ và trạng thái bắt đầu của chổi vẫn hoạt động.",
+  "config.quoteReply": "Chọn văn bản trong câu trả lời của Claude để có Trả lời và Sao chép. Trả lời giữ phần đã chọn dưới dạng thẻ phía trên hộp tin nhắn và gửi nó như một trích dẫn cùng tin nhắn tiếp theo của bạn.",
+  "config.quoteTools": "Các nút Sao chép và Chọn ở góc của mỗi trích dẫn trong cuộc trò chuyện Claude Code.",
+  "config.imagePreview": "Ảnh thu nhỏ dưới dòng công cụ cho các tệp ảnh mà Claude đọc, ghi hoặc nhắc tên; nhấp để phóng to, hoặc mở tệp trong trình soạn thảo.",
+  "config.reapplyAfterUpdate": "Áp dụng lại các tính năng nâng cao khi Claude Code cập nhật hoặc trình soạn thảo khởi động. Khi tắt, phiên bản Claude Code mới sẽ giữ nguyên trạng thái gốc cho đến khi bạn áp dụng từ bảng điều khiển.",
+  "config.checkForUpdates": "Hỏi cửa hàng tiện ích của trình soạn thảo bạn dùng (Visual Studio Marketplace hoặc Open VSX) về phiên bản Enhancer mới nhất và báo trong bảng điều khiển khi có bản mới hơn. Không gửi bất cứ điều gì về bạn.",
+  "config.ornusNews": "Hiện một tin tức Ornus ngắn, có thể đóng, trong bảng điều khiển, đọc từ một tệp văn bản nhỏ trên ornus.ai. Không gửi bất cứ điều gì về bạn.",
+  "config.feedbackButton": "Hiện “Gửi phản hồi” trong bảng điều khiển. Tin nhắn chỉ được gửi đến nhóm Enhancer khi bạn nhấn Gửi, và chỉ gồm những gì biểu mẫu hiển thị."
+}

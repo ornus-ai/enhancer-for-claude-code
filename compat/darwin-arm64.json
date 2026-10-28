@@ -1,0 +1,71 @@
+{
+  "2.1.302": {
+    "version": "2.1.302",
+    "platform": "darwin-arm64",
+    "checkedAt": "2026-10-17T22:12:10.640Z",
+    "safety": "ok",
+    "features": {
+      "rtl": {
+        "state": "active"
+      },
+      "broom": {
+        "state": "active"
+      },
+      "quoteReply": {
+        "state": "active"
+      },
+      "quoteTools": {
+        "state": "active"
+      },
+      "imagePreview": {
+        "state": "active"
+      }
+    }
+  },
+  "2.1.301": {
+    "version": "2.1.301",
+    "platform": "darwin-arm64",
+    "checkedAt": "2026-10-17T22:12:16.609Z",
+    "safety": "ok",
+    "features": {
+      "rtl": {
+        "state": "active"
+      },
+      "broom": {
+        "state": "active"
+      },
+      "quoteReply": {
+        "state": "active"
+      },
+      "quoteTools": {
+        "state": "active"
+      },
+      "imagePreview": {
+        "state": "active"
+      }
+    }
+  },
+  "2.1.300": {
+    "version": "2.1.300",
+    "platform": "darwin-arm64",
+    "checkedAt": "2026-10-17T22:12:22.155Z",
+    "safety": "ok",
+    "features": {
+      "rtl": {
+        "state": "active"
+      },
+      "broom": {
+        "state": "active"
+      },
+      "quoteReply": {
+        "state": "active"
+      },
+      "quoteTools": {
+        "state": "active"
+      },
+      "imagePreview": {
+        "state": "active"
+      }
+    }
+  }
+}

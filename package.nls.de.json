@@ -1,0 +1,22 @@
+{
+  "description": "Macht den Claude-Code-Chat ruhiger und besser lesbar: Text von rechts nach links (Arabisch, Persisch, Urdu, Hebräisch und mehr), ein Besen, der Tool-Zeilen einklappt, Antwort mit Zitat, Zitat-Werkzeuge und Bildvorschau. Nicht mit Anthropic verbunden.",
+  "command.openPanel": "Bedienfeld öffnen",
+  "command.enable": "Text von rechts nach links aktivieren",
+  "command.enableBroom": "Besen aktivieren (Tool-Zeilen einklappen)",
+  "command.restore": "Original-Claude-Code wiederherstellen",
+  "command.status": "Status anzeigen",
+  "view.welcome": "[Bedienfeld öffnen](command:enhancer.openPanel)",
+  "config.language": "Die Sprache des Enhancer-Bedienfelds. Automatisch folgt der Anzeigesprache des Editors, und Englisch, wenn Enhancer sie nicht spricht.",
+  "config.languageEverywhere": "Die Sprache von Enhancer auch im Claude-Code-Chat (Schaltflächen und Beschriftungen), in der Statusleiste und in Benachrichtigungen verwenden. Wenn aus, ändert sich nur die Sprache des Bedienfelds.",
+  "config.arabic": "Text von rechts nach links im Claude-Code-Chat. Text mit einem Buchstaben einer Rechts-nach-links-Sprache (Arabisch, Persisch, Urdu, Hebräisch und andere) wird von rechts nach links gelesen, auch wenn er mit einem englischen Wort beginnt.",
+  "config.broom": "Eine Besen-Schaltfläche im Claude-Code-Chat: Ein Klick klappt Tool-Zeilen auf ihre Kopfzeile ein und blendet abgeschlossene Denkprozesse aus, neue auch; ein weiterer Klick zeigt sie wieder an. Jede Tool-Zeile hat außerdem ein eigenes −/+.",
+  "config.broomStartsOn": "Der Besen ist bei jedem Öffnen des Claude-Code-Chats an: Tool-Zeilen eingeklappt, abgeschlossene Denkprozesse ausgeblendet. Ein Klick auf den Besen gilt, bis der Chat neu geladen wird.",
+  "config.broomButton": "Die Besen-Schaltfläche im Nachrichtenfeld von Claude Code anzeigen. Wenn ausgeblendet, funktionieren das −/+ jeder Tool-Zeile und der Startzustand des Besens weiterhin.",
+  "config.quoteReply": "Markiere Text in einer Claude-Antwort, um Antworten und Kopieren zu erhalten. Antworten behält die Markierung als Karte über dem Nachrichtenfeld und sendet sie als Zitat mit deiner nächsten Nachricht.",
+  "config.quoteTools": "Schaltflächen „Kopieren“ und „Auswählen“ in der Ecke jedes Zitats im Claude-Code-Chat.",
+  "config.imagePreview": "Vorschaubilder unter einer Tool-Zeile für Bilddateien, die Claude liest, schreibt oder nennt; klicken zum Vergrößern oder die Datei im Editor öffnen.",
+  "config.reapplyAfterUpdate": "Die Verbesserungen erneut anwenden, wenn Claude Code aktualisiert wird oder der Editor startet. Wenn aus, bleibt eine neue Claude-Code-Version original, bis du sie im Bedienfeld anwendest.",
+  "config.checkForUpdates": "Den Erweiterungs-Store deines Editors (Visual Studio Marketplace oder Open VSX) nach der neuesten Enhancer-Version fragen und im Bedienfeld melden, wenn es eine neuere gibt. Sendet nichts über dich.",
+  "config.ornusNews": "Eine kurze, schließbare Ornus-News im Bedienfeld anzeigen, gelesen aus einer kleinen Textdatei auf ornus.ai. Sendet nichts über dich.",
+  "config.feedbackButton": "Zeige „Feedback senden“ im Bedienfeld. Eine Nachricht geht nur dann an das Enhancer-Team, wenn du auf Senden drückst, und nur mit dem, was das Formular zeigt."
+}

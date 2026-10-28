@@ -1,0 +1,22 @@
+{
+  "description": "Membuat obrolan Claude Code lebih tenang dan mudah dibaca: teks kanan-ke-kiri (Arab, Persia, Urdu, Ibrani, dan lainnya), sapu yang melipat baris alat, balas dengan kutipan dan alat kutipan, serta pratinjau gambar. Tidak berafiliasi dengan Anthropic.",
+  "command.openPanel": "Buka panel kontrol",
+  "command.enable": "Aktifkan teks kanan-ke-kiri",
+  "command.enableBroom": "Aktifkan sapu (lipat baris alat)",
+  "command.restore": "Pulihkan Claude Code asli",
+  "command.status": "Tampilkan status",
+  "view.welcome": "[Buka panel kontrol](command:enhancer.openPanel)",
+  "config.language": "Bahasa panel kontrol Enhancer. Otomatis mengikuti bahasa tampilan editor, dan bahasa Inggris jika Enhancer tidak mendukungnya.",
+  "config.languageEverywhere": "Gunakan bahasa Enhancer juga di obrolan Claude Code (tombol dan labelnya), bilah status, dan notifikasi. Jika nonaktif, hanya panel kontrol yang berganti bahasa.",
+  "config.arabic": "Teks kanan-ke-kiri di obrolan Claude Code. Teks yang berisi huruf dari bahasa kanan-ke-kiri (Arab, Persia, Urdu, Ibrani, dan lainnya) dibaca dari kanan ke kiri, meskipun diawali kata bahasa Inggris.",
+  "config.broom": "Tombol sapu di obrolan Claude Code: satu klik melipat baris alat hingga tersisa judulnya dan menyembunyikan pemikiran yang sudah selesai, yang baru juga; klik lagi untuk menampilkannya kembali. Setiap baris alat juga mendapat tombol −/+ sendiri.",
+  "config.broomStartsOn": "Sapu aktif setiap kali obrolan Claude Code dibuka: baris alat terlipat dan pemikiran yang sudah selesai disembunyikan. Klik pada sapu berlaku sampai obrolan dimuat ulang.",
+  "config.broomButton": "Tampilkan tombol sapu di kotak pesan Claude Code. Jika disembunyikan, tombol −/+ tiap baris alat dan keadaan awal sapu tetap berfungsi.",
+  "config.quoteReply": "Pilih teks di balasan Claude untuk mendapatkan Balas dan Salin. Balas menyimpan pilihan sebagai kartu di atas kotak pesan dan mengirimnya sebagai kutipan bersama pesan Anda berikutnya.",
+  "config.quoteTools": "Tombol Salin dan Pilih di sudut setiap kutipan di obrolan Claude Code.",
+  "config.imagePreview": "Gambar mini di bawah baris alat untuk file gambar yang dibaca, ditulis, atau disebut Claude; klik untuk memperbesar, atau buka file di editor.",
+  "config.reapplyAfterUpdate": "Terapkan peningkatan lagi saat Claude Code diperbarui atau editor dimulai. Jika nonaktif, versi Claude Code baru tetap asli sampai Anda menerapkannya dari panel kontrol.",
+  "config.checkForUpdates": "Tanyakan versi Enhancer terbaru ke toko ekstensi editor Anda (Visual Studio Marketplace atau Open VSX) dan beri tahu di panel kontrol jika ada yang lebih baru. Tidak mengirim apa pun tentang Anda.",
+  "config.ornusNews": "Tampilkan satu berita Ornus singkat yang dapat ditutup di panel kontrol, dibaca dari file teks kecil di ornus.ai. Tidak mengirim apa pun tentang Anda.",
+  "config.feedbackButton": "Tampilkan “Kirim masukan” di panel kontrol. Pesan hanya dikirim ke tim Enhancer saat Anda menekan Kirim, dan hanya berisi apa yang ditampilkan formulir."
+}

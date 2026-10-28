@@ -1,0 +1,22 @@
+{
+  "description": "Sprawia, że czat Claude Code jest spokojniejszy i czytelniejszy: tekst od prawej do lewej (arabski, perski, urdu, hebrajski i inne), miotła zwijająca wiersze narzędzi, odpowiedź z cytatem, narzędzia cytatów i podgląd obrazów. Niepowiązane z Anthropic.",
+  "command.openPanel": "Otwórz panel sterowania",
+  "command.enable": "Włącz tekst od prawej do lewej",
+  "command.enableBroom": "Włącz miotłę (zwijanie wierszy narzędzi)",
+  "command.restore": "Przywróć oryginalny Claude Code",
+  "command.status": "Pokaż stan",
+  "view.welcome": "[Otwórz panel sterowania](command:enhancer.openPanel)",
+  "config.language": "Język panelu sterowania Enhancer. Automatycznie oznacza język interfejsu edytora, a gdy Enhancer go nie obsługuje — angielski.",
+  "config.languageEverywhere": "Używaj języka Enhancer także w czacie Claude Code (przyciski i etykiety), na pasku stanu i w powiadomieniach. Gdy wyłączone, język zmienia się tylko w panelu sterowania.",
+  "config.arabic": "Tekst od prawej do lewej w czacie Claude Code. Tekst zawierający literę języka pisanego od prawej do lewej (arabskiego, perskiego, urdu, hebrajskiego i innych) jest czytany od prawej do lewej, nawet jeśli zaczyna się od angielskiego słowa.",
+  "config.broom": "Przycisk miotły w czacie Claude Code: jedno kliknięcie zwija wiersze narzędzi do nagłówka i ukrywa zakończone myślenie, także nowe; kolejne kliknięcie pokazuje je ponownie. Każdy wiersz narzędzia ma też własne −/+.",
+  "config.broomStartsOn": "Miotła jest włączona przy każdym otwarciu czatu Claude Code: wiersze narzędzi zwinięte, zakończone myślenie ukryte. Kliknięcie miotły działa do ponownego załadowania czatu.",
+  "config.broomButton": "Pokaż przycisk miotły w polu wiadomości Claude Code. Gdy jest ukryty, −/+ przy każdym wierszu narzędzia i stan początkowy miotły nadal działają.",
+  "config.quoteReply": "Zaznacz tekst w odpowiedzi Claude, aby zobaczyć Odpowiedz i Kopiuj. Odpowiedz zachowuje zaznaczenie jako kartę nad polem wiadomości i wysyła je jako cytat z następną wiadomością.",
+  "config.quoteTools": "Przyciski Kopiuj i Zaznacz w rogu każdego cytatu w czacie Claude Code.",
+  "config.imagePreview": "Miniatury pod wierszem narzędzia dla plików obrazów, które Claude odczytuje, zapisuje lub wymienia; kliknij, aby powiększyć, albo otwórz plik w edytorze.",
+  "config.reapplyAfterUpdate": "Stosuj ulepszenia ponownie, gdy Claude Code się aktualizuje lub uruchamia się edytor. Gdy wyłączone, nowa wersja Claude Code pozostaje oryginalna, dopóki nie zastosujesz ulepszeń z panelu sterowania.",
+  "config.checkForUpdates": "Pytaj sklep z rozszerzeniami Twojego edytora (Visual Studio Marketplace lub Open VSX) o najnowszą wersję Enhancer i informuj w panelu sterowania, gdy jest nowsza. Nie wysyła niczego o Tobie.",
+  "config.ornusNews": "Pokaż w panelu sterowania jedną krótką, zamykaną nowość Ornus, odczytaną z małego pliku tekstowego na ornus.ai. Nie wysyła niczego o Tobie.",
+  "config.feedbackButton": "Pokaż „Wyślij opinię” w panelu sterowania. Wiadomość trafia do zespołu Enhancer tylko po naciśnięciu Wyślij i zawiera wyłącznie to, co pokazuje formularz."
+}

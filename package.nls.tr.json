@@ -1,0 +1,22 @@
+{
+  "description": "Claude Code sohbetini daha sakin ve okunaklı yapar: sağdan sola metin (Arapça, Farsça, Urduca, İbranice ve daha fazlası), araç satırlarını daraltan bir süpürge, alıntıyla yanıt ve alıntı araçları, görsel önizlemeler. Anthropic ile bağlantılı değildir.",
+  "command.openPanel": "Denetim masasını aç",
+  "command.enable": "Sağdan sola metni aç",
+  "command.enableBroom": "Süpürgeyi aç (araç satırlarını daralt)",
+  "command.restore": "Özgün Claude Code'u geri yükle",
+  "command.status": "Durumu göster",
+  "view.welcome": "[Denetim masasını aç](command:enhancer.openPanel)",
+  "config.language": "Enhancer denetim masasının dili. Otomatik, düzenleyicinin görüntüleme dilini izler; Enhancer o dili bilmiyorsa İngilizce kullanılır.",
+  "config.languageEverywhere": "Enhancer'ın dilini Claude Code sohbetinde (düğmeleri ve etiketleri), durum çubuğunda ve bildirimlerde de kullan. Kapalıyken yalnızca denetim masasının dili değişir.",
+  "config.arabic": "Claude Code sohbetinde sağdan sola metin. Sağdan sola yazılan bir dilin (Arapça, Farsça, Urduca, İbranice ve diğerleri) harfini içeren metin, İngilizce bir sözcükle başlasa bile sağdan sola okunur.",
+  "config.broom": "Claude Code sohbetinde bir süpürge düğmesi: tek tıklama araç satırlarını başlığına kadar daraltır ve biten düşünceleri gizler, yenileri de; bir tıklama daha hepsini yeniden gösterir. Her araç satırı ayrıca kendi −/+ düğmesini alır.",
+  "config.broomStartsOn": "Claude Code sohbeti her açıldığında süpürge açık olur: araç satırları daraltılmış, biten düşünceler gizli. Süpürgeye tıklamak sohbet yeniden yüklenene kadar geçerlidir.",
+  "config.broomButton": "Süpürge düğmesini Claude Code ileti kutusunda göster. Gizliyken her araç satırının kendi −/+ düğmesi ve süpürgenin başlangıç durumu çalışmaya devam eder.",
+  "config.quoteReply": "Bir Claude yanıtında metin seçerek Yanıtla ve Kopyala düğmelerini alın. Yanıtla, seçimi ileti kutusunun üstünde bir kart olarak tutar ve sonraki iletinizle birlikte alıntı olarak gönderir.",
+  "config.quoteTools": "Claude Code sohbetindeki her alıntının köşesinde Kopyala ve Seç düğmeleri.",
+  "config.imagePreview": "Claude'un okuduğu, yazdığı veya adını andığı görsel dosyaları için bir araç satırının altında küçük resimler; yakınlaştırmak için tıklayın ya da dosyayı düzenleyicide açın.",
+  "config.reapplyAfterUpdate": "Claude Code güncellendiğinde veya düzenleyici başladığında geliştirmeleri yeniden uygula. Kapalıyken yeni bir Claude Code sürümü, denetim masasından uygulayana kadar özgün kalır.",
+  "config.checkForUpdates": "Düzenleyicinizin eklenti mağazasından (Visual Studio Marketplace veya Open VSX) en son Enhancer sürümünü sor ve daha yeni bir sürüm olduğunda denetim masasında bildir. Sizinle ilgili hiçbir şey göndermez.",
+  "config.ornusNews": "Denetim masasında, ornus.ai üzerindeki küçük bir metin dosyasından okunan, kapatılabilir kısa bir Ornus haberi göster. Sizinle ilgili hiçbir şey göndermez.",
+  "config.feedbackButton": "Denetim masasında “Geri bildirim gönder” seçeneğini göster. Enhancer ekibine yalnızca Gönder'e bastığınızda ve yalnızca formun gösterdiği içerikle bir ileti gönderilir."
+}

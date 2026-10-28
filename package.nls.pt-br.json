@@ -1,0 +1,22 @@
+{
+  "description": "Deixa o chat do Claude Code mais tranquilo e legível: texto da direita para a esquerda (árabe, persa, urdu, hebraico e mais), uma vassoura que recolhe as linhas de ferramentas, resposta com citação e ferramentas de citação, e pré-visualizações de imagens. Sem afiliação com a Anthropic.",
+  "command.openPanel": "Abrir painel de controle",
+  "command.enable": "Ativar o texto da direita para a esquerda",
+  "command.enableBroom": "Ativar a vassoura (recolher linhas de ferramentas)",
+  "command.restore": "Restaurar o Claude Code original",
+  "command.status": "Mostrar status",
+  "view.welcome": "[Abrir painel de controle](command:enhancer.openPanel)",
+  "config.language": "O idioma do painel de controle do Enhancer. Automático segue o idioma de exibição do editor, e inglês quando o Enhancer não o fala.",
+  "config.languageEverywhere": "Usar o idioma do Enhancer também no chat do Claude Code (seus botões e rótulos), na barra de status e nas notificações. Desativado, apenas o painel de controle muda de idioma.",
+  "config.arabic": "Texto da direita para a esquerda no chat do Claude Code. O texto que contém uma letra de um idioma da direita para a esquerda (árabe, persa, urdu, hebraico e outros) é lido da direita para a esquerda, mesmo que comece com uma palavra em inglês.",
+  "config.broom": "Um botão de vassoura no chat do Claude Code: um clique recolhe as linhas de ferramentas até o cabeçalho e oculta o raciocínio concluído, os novos também; outro clique os mostra de novo. Cada linha de ferramenta também tem seu próprio −/+.",
+  "config.broomStartsOn": "A vassoura fica ativada toda vez que o chat do Claude Code abre: linhas de ferramentas recolhidas e raciocínio concluído oculto. Um clique na vassoura dura até o chat ser recarregado.",
+  "config.broomButton": "Mostrar o botão da vassoura na caixa de mensagem do Claude Code. Quando oculto, o −/+ de cada linha de ferramenta e o estado inicial da vassoura continuam funcionando.",
+  "config.quoteReply": "Selecione texto em uma resposta do Claude para obter Responder e Copiar. Responder mantém a seleção como um cartão acima da caixa de mensagem e a envia como citação com sua próxima mensagem.",
+  "config.quoteTools": "Botões Copiar e Selecionar no canto de cada citação no chat do Claude Code.",
+  "config.imagePreview": "Miniaturas sob uma linha de ferramenta para os arquivos de imagem que o Claude lê, escreve ou menciona; clique para ampliar ou abra o arquivo no editor.",
+  "config.reapplyAfterUpdate": "Aplicar as melhorias novamente quando o Claude Code for atualizado ou o editor iniciar. Desativado, uma nova versão do Claude Code continua original até você aplicar pelo painel de controle.",
+  "config.checkForUpdates": "Perguntar à loja de extensões do seu editor (Visual Studio Marketplace ou Open VSX) qual é a versão mais recente do Enhancer e avisar no painel de controle quando houver uma mais nova. Não envia nada sobre você.",
+  "config.ornusNews": "Mostrar no painel de controle uma breve novidade do Ornus, que pode ser dispensada, lida de um pequeno arquivo de texto em ornus.ai. Não envia nada sobre você.",
+  "config.feedbackButton": "Mostrar “Enviar feedback” no painel de controle. Uma mensagem só é enviada à equipe do Enhancer quando você pressiona Enviar, e apenas com o que o formulário mostra."
+}

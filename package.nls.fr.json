@@ -1,0 +1,22 @@
+{
+  "description": "Rend le chat de Claude Code plus calme et plus lisible : texte de droite à gauche (arabe, persan, ourdou, hébreu et plus), un balai qui replie les lignes d'outils, réponse avec citation et outils de citation, et aperçus d'images. Non affilié à Anthropic.",
+  "command.openPanel": "Ouvrir le panneau de contrôle",
+  "command.enable": "Activer le texte de droite à gauche",
+  "command.enableBroom": "Activer le balai (replier les lignes d'outils)",
+  "command.restore": "Restaurer Claude Code d'origine",
+  "command.status": "Afficher l'état",
+  "view.welcome": "[Ouvrir le panneau de contrôle](command:enhancer.openPanel)",
+  "config.language": "La langue du panneau de contrôle d'Enhancer. Automatique suit la langue d'affichage de l'éditeur, et l'anglais quand Enhancer ne la parle pas.",
+  "config.languageEverywhere": "Utiliser aussi la langue d'Enhancer dans le chat de Claude Code (ses boutons et libellés), la barre d'état et les notifications. Désactivé, seule la langue du panneau de contrôle change.",
+  "config.arabic": "Texte de droite à gauche dans le chat de Claude Code. Un texte contenant une lettre d'une langue de droite à gauche (arabe, persan, ourdou, hébreu et autres) se lit de droite à gauche, même s'il commence par un mot anglais.",
+  "config.broom": "Un bouton balai dans le chat de Claude Code : un clic replie les lignes d'outils sur leur en-tête et masque la réflexion terminée, les nouvelles aussi ; un autre clic les affiche de nouveau. Chaque ligne d'outil a aussi son propre −/+.",
+  "config.broomStartsOn": "Le balai est activé à chaque ouverture du chat de Claude Code : lignes d'outils repliées et réflexion terminée masquée. Un clic sur le balai dure jusqu'au rechargement du chat.",
+  "config.broomButton": "Afficher le bouton du balai dans la zone de message de Claude Code. S'il est masqué, le −/+ de chaque ligne d'outil et l'état de départ du balai fonctionnent toujours.",
+  "config.quoteReply": "Sélectionnez du texte dans une réponse de Claude pour obtenir Répondre et Copier. Répondre garde la sélection sous forme de carte au-dessus de la zone de message et l'envoie comme citation avec votre prochain message.",
+  "config.quoteTools": "Boutons Copier et Sélectionner dans le coin de chaque citation du chat de Claude Code.",
+  "config.imagePreview": "Miniatures sous une ligne d'outil pour les fichiers image que Claude lit, écrit ou mentionne ; cliquez pour agrandir, ou ouvrez le fichier dans l'éditeur.",
+  "config.reapplyAfterUpdate": "Appliquer de nouveau les améliorations quand Claude Code est mis à jour ou que l'éditeur démarre. Désactivé, une nouvelle version de Claude Code reste d'origine jusqu'à ce que vous l'appliquiez depuis le panneau de contrôle.",
+  "config.checkForUpdates": "Demander à la boutique d'extensions de votre éditeur (Visual Studio Marketplace ou Open VSX) la dernière version d'Enhancer et l'indiquer dans le panneau de contrôle quand une plus récente existe. N'envoie rien sur vous.",
+  "config.ornusNews": "Afficher dans le panneau de contrôle une courte actualité d'Ornus, que l'on peut ignorer, lue dans un petit fichier texte sur ornus.ai. N'envoie rien sur vous.",
+  "config.feedbackButton": "Afficher « Envoyer un commentaire » dans le panneau de contrôle. Un message n'est envoyé à l'équipe d'Enhancer que lorsque vous appuyez sur Envoyer, avec uniquement ce que le formulaire affiche."
+}

@@ -1,0 +1,10 @@
+node_modules/
+out/
+*.vsix
+video/
+.DS_Store
+/.env
+# Internal notes stay on this Mac only (owner, 2026-10-28): never in the public repository.
+PLAN.md
+CLAUDE.md
+.ornus/

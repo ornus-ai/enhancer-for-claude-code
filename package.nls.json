@@ -1,0 +1,22 @@
+{
+  "description": "Makes the Claude Code chat calmer and more readable: right-to-left text (Arabic, Persian, Urdu, Hebrew and more), a broom that folds tool rows, quote reply and quote tools, and image previews. Not affiliated with Anthropic.",
+  "command.openPanel": "Open control panel",
+  "command.enable": "Turn on right-to-left text",
+  "command.enableBroom": "Turn on the broom (fold tool rows)",
+  "command.restore": "Restore original Claude Code",
+  "command.status": "Show status",
+  "view.welcome": "[Open control panel](command:enhancer.openPanel)",
+  "config.language": "The language of Enhancer's control panel. Automatic follows the editor's display language, and English when Enhancer does not speak it.",
+  "config.languageEverywhere": "Use Enhancer's language in the Claude Code chat (its buttons and labels), the status bar and notifications too. When off, only the control panel changes language.",
+  "config.arabic": "Right-to-left text in the Claude Code chat. Text holding a letter of a right-to-left language (Arabic, Persian, Urdu, Hebrew and others) reads right to left, even when it starts with an English word.",
+  "config.broom": "A broom button in the Claude Code chat: one click folds tool rows to their header and hides finished thinking, new ones too; another click shows them again. Each tool row also gets its own −/+.",
+  "config.broomStartsOn": "The broom is on each time the Claude Code chat opens: tool rows folded and finished thinking hidden. A click on the broom lasts until the chat reloads.",
+  "config.broomButton": "Show the broom button in the Claude Code message box. When hidden, each tool row's own −/+ and the broom's start state still work.",
+  "config.quoteReply": "Select text in a Claude reply to get Reply and Copy. Reply keeps the selection as a card above the message box and sends it as a quote with your next message.",
+  "config.quoteTools": "Copy and Select buttons in the corner of every quote in the Claude Code chat.",
+  "config.imagePreview": "Thumbnails under a tool row for the image files Claude reads, writes or names; click to zoom, or open the file in the editor.",
+  "config.reapplyAfterUpdate": "Apply the enhancements again when Claude Code updates or the editor starts. When off, a new Claude Code version stays original until you apply from the control panel.",
+  "config.checkForUpdates": "Ask your editor's extension store (Visual Studio Marketplace or Open VSX) for the latest Enhancer version and say in the control panel when a newer one exists. Sends nothing about you.",
+  "config.ornusNews": "Show one short, dismissible Ornus news item in the control panel, read from a small text file on ornus.ai. Sends nothing about you.",
+  "config.feedbackButton": "Show \"Send feedback\" in the control panel. A message is sent to the Enhancer team only when you press Send, with only what the form shows."
+}

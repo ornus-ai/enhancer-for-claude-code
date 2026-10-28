@@ -1,0 +1,226 @@
+{
+  "name": "enhancer-for-claude-code",
+  "displayName": "Enhancer for Claude Code",
+  "description": "%description%",
+  "version": "0.4.0",
+  "publisher": "enhancer",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ornus-ai/enhancer-for-claude-code"
+  },
+  "homepage": "https://github.com/ornus-ai/enhancer-for-claude-code#readme",
+  "bugs": {
+    "url": "https://github.com/ornus-ai/enhancer-for-claude-code/issues"
+  },
+  "icon": "media/icon.png",
+  "private": true,
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "main": "./out/extension.js",
+  "bin": {
+    "enhancer-recover": "./out/cli.js"
+  },
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "extensionKind": [
+    "ui",
+    "workspace"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "enhancer.openPanel",
+        "title": "%command.openPanel%",
+        "category": "Enhancer"
+      },
+      {
+        "command": "enhancer.enable",
+        "title": "%command.enable%",
+        "category": "Enhancer"
+      },
+      {
+        "command": "enhancer.enableBroom",
+        "title": "%command.enableBroom%",
+        "category": "Enhancer"
+      },
+      {
+        "command": "enhancer.restore",
+        "title": "%command.restore%",
+        "category": "Enhancer"
+      },
+      {
+        "command": "enhancer.status",
+        "title": "%command.status%",
+        "category": "Enhancer"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "enhancer",
+          "title": "Enhancer",
+          "icon": "media/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "enhancer": [
+        {
+          "id": "enhancer.home",
+          "name": "Enhancer"
+        }
+      ]
+    },
+    "viewsWelcome": [
+      {
+        "view": "enhancer.home",
+        "contents": "%view.welcome%"
+      }
+    ],
+    "configuration": {
+      "title": "Enhancer for Claude Code",
+      "properties": {
+        "enhancer.language": {
+          "type": "string",
+          "default": "auto",
+          "scope": "application",
+          "enum": [
+            "auto",
+            "en",
+            "zh-cn",
+            "hi",
+            "es",
+            "ar",
+            "fr",
+            "bn",
+            "pt-br",
+            "ru",
+            "id",
+            "ur",
+            "de",
+            "ja",
+            "vi",
+            "tr",
+            "ko",
+            "fa",
+            "it",
+            "pl",
+            "uk",
+            "he"
+          ],
+          "enumItemLabels": [
+            "Automatic",
+            "English",
+            "简体中文",
+            "हिन्दी",
+            "Español",
+            "العربية",
+            "Français",
+            "বাংলা",
+            "Português (Brasil)",
+            "Русский",
+            "Bahasa Indonesia",
+            "اردو",
+            "Deutsch",
+            "日本語",
+            "Tiếng Việt",
+            "Türkçe",
+            "한국어",
+            "فارسی",
+            "Italiano",
+            "Polski",
+            "Українська",
+            "עברית"
+          ],
+          "description": "%config.language%"
+        },
+        "enhancer.languageEverywhere": {
+          "type": "boolean",
+          "default": true,
+          "scope": "application",
+          "description": "%config.languageEverywhere%"
+        },
+        "enhancer.arabic": {
+          "type": "boolean",
+          "default": true,
+          "scope": "application",
+          "description": "%config.arabic%"
+        },
+        "enhancer.broom": {
+          "type": "boolean",
+          "default": true,
+          "scope": "application",
+          "description": "%config.broom%"
+        },
+        "enhancer.broomStartsOn": {
+          "type": "boolean",
+          "default": false,
+          "scope": "application",
+          "description": "%config.broomStartsOn%"
+        },
+        "enhancer.broomButton": {
+          "type": "boolean",
+          "default": true,
+          "scope": "application",
+          "description": "%config.broomButton%"
+        },
+        "enhancer.quoteReply": {
+          "type": "boolean",
+          "default": true,
+          "scope": "application",
+          "description": "%config.quoteReply%"
+        },
+        "enhancer.quoteTools": {
+          "type": "boolean",
+          "default": true,
+          "scope": "application",
+          "description": "%config.quoteTools%"
+        },
+        "enhancer.imagePreview": {
+          "type": "boolean",
+          "default": true,
+          "scope": "application",
+          "description": "%config.imagePreview%"
+        },
+        "enhancer.reapplyAfterUpdate": {
+          "type": "boolean",
+          "default": true,
+          "scope": "application",
+          "description": "%config.reapplyAfterUpdate%"
+        },
+        "enhancer.checkForUpdates": {
+          "type": "boolean",
+          "default": true,
+          "scope": "application",
+          "description": "%config.checkForUpdates%"
+        },
+        "enhancer.ornusNews": {
+          "type": "boolean",
+          "default": true,
+          "scope": "application",
+          "description": "%config.ornusNews%"
+        },
+        "enhancer.feedbackButton": {
+          "type": "boolean",
+          "default": true,
+          "scope": "application",
+          "description": "%config.feedbackButton%"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:uninstall": "node ./out/uninstall.js",
+    "build": "tsc -p .",
+    "robot": "tsc -p . && node out/robot/robot.js check",
+    "test": "tsc -p . && node --test \"out/test/*.test.js\""
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/vscode": "^1.90.0",
+    "typescript": "^5.6.0"
+  }
+}

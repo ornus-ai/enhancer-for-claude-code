@@ -1,0 +1,160 @@
+/* Enhancer control panel. Approved board «لوحة تحكم Enhancer — التصميم قبل البناء»
+   (.ornus/boards/enhancer-1045): ChatGPT desktop settings pattern, monochrome ink/paper,
+   colour only for meaning, apricot only on the mascot. */
+:root {
+  --page: #F5F5F2;
+  --card: #FFFFFF;
+  --ink: #0E0E10;
+  --ink-2: rgba(14,14,16,.62);
+  --ink-3: rgba(14,14,16,.45);
+  --line: rgba(14,14,16,.08);
+  --off: rgba(14,14,16,.12);
+  --mascot: #E5894A;
+  --ok: #2F8F5B;
+  --warn: #B7791F;
+  --bad: #C2413A;
+  --art-1: #EDEDEA; --art-2: #F7F7F5; --art-line: rgba(14,14,16,.16);
+  --knob-on: #FFFFFF;
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, "Noto Sans Arabic", sans-serif;
+}
+body.vscode-dark, body.vscode-high-contrast:not(.vscode-high-contrast-light) {
+  --page: #0E0E10;
+  --card: #1A1A1D;
+  --ink: #F5F5F2;
+  --ink-2: rgba(245,245,242,.65);
+  --ink-3: rgba(245,245,242,.45);
+  --line: rgba(245,245,242,.08);
+  --off: rgba(245,245,242,.18);
+  --mascot: #F0A46E;
+  --ok: #5CC28A;
+  --warn: #E0A84A;
+  --bad: #EE7A72;
+  --art-1: #1F1F23; --art-2: #16161A; --art-line: rgba(245,245,242,.16);
+  --knob-on: #0E0E10;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { background: var(--page); color: var(--ink); font: 14px/1.5 var(--font); -webkit-font-smoothing: antialiased; }
+button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; text-align: inherit; }
+button:focus-visible, .row-btn:focus-visible { outline: 2px solid var(--vscode-focusBorder, var(--ink)); outline-offset: 2px; border-radius: 6px; }
+
+.panel { max-width: 728px; margin: 0 auto; padding: 40px 24px 48px; }
+
+.head { position: relative; display: flex; align-items: center; gap: 14px; min-height: 72px; margin-bottom: 40px; }
+.head .mascot { width: 52px; height: 48px; color: var(--mascot); flex: none; }
+.head h1 { font-size: 22px; font-weight: 650; margin: 0; letter-spacing: -.01em; }
+.status { display: inline-flex; align-items: center; gap: 7px; margin-top: 4px; font-size: 13px; color: var(--ink-2); }
+.status .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--ok); display: block; flex: none; }
+.status.warn .dot { background: var(--warn); }
+.status.off .dot { background: var(--ink-3); }
+.art { position: absolute; inset-inline-end: -8px; top: -28px; width: 210px; height: 120px; opacity: .8; pointer-events: none;
+       -webkit-mask-image: linear-gradient(to right, #000 30%, transparent); mask-image: linear-gradient(to right, #000 30%, transparent); }
+[dir="rtl"] .art { -webkit-mask-image: linear-gradient(to left, #000 30%, transparent); mask-image: linear-gradient(to left, #000 30%, transparent); }
+[dir="ltr"] .art svg { transform: scaleX(-1); }
+
+.section { margin-top: 40px; }
+.section:first-child { margin-top: 0; }
+.section-t { font-size: 13px; font-weight: 600; color: var(--ink-2); margin: 0 0 12px; padding-inline-start: 4px; display: flex; align-items: center; gap: 8px; }
+.info-note { font-size: 12.5px; color: var(--ink-2); margin: -4px 4px 12px; }
+.card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.row { min-height: 52px; display: flex; align-items: center; gap: 12px; padding: 8px 16px; position: relative; width: 100%; }
+.row + .row::before { content: ""; position: absolute; top: 0; inset-inline: 16px; height: 1px; background: var(--line); }
+.row .ico { width: 20px; height: 20px; color: var(--ink-2); flex: none; }
+.row .t { flex: 1; min-width: 0; }
+.row .v { color: var(--ink-3); font-size: 13px; white-space: nowrap; }
+.row.locked .t { color: var(--ink-2); }
+.row.locked .ico { color: var(--ink-3); }
+.row.danger .t { color: var(--bad); }
+.row-btn:hover { background: color-mix(in srgb, var(--ink) 3%, transparent); }
+.chev { width: 14px; height: 14px; color: var(--ink-3); flex: none; }
+[dir="rtl"] .chev { transform: scaleX(-1); }
+.lock { width: 14px; height: 14px; color: var(--ink-3); flex: none; }
+.badge { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; white-space: nowrap; }
+.badge .dot { width: 7px; height: 7px; border-radius: 50%; display: block; flex: none; }
+.badge.ok { color: var(--ok); }
+.badge.ok .dot { background: var(--ok); }
+.badge.wait { color: var(--warn); }
+.badge.wait .dot { background: var(--warn); }
+
+.tg { width: 36px; height: 22px; border-radius: 11px; background: var(--off); position: relative; flex: none; transition: background .15s ease-out; }
+.tg::after { content: ""; position: absolute; top: 2px; inset-inline-start: 2px; width: 18px; height: 18px; border-radius: 50%; background: #fff; box-shadow: 0 1px 2px rgba(0,0,0,.2); transition: inset-inline-start .15s ease-out; }
+.tg[aria-checked="true"] { background: var(--ink); }
+.tg[aria-checked="true"]::after { inset-inline-start: 16px; background: var(--knob-on); }
+.tg:disabled { opacity: .4; cursor: default; }
+
+.info { width: 22px; height: 22px; display: grid; place-items: center; border-radius: 6px; color: var(--ink-3); }
+.info svg { width: 15px; height: 15px; }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; height: 34px; padding: 0 14px; border-radius: 9px; font-weight: 500; font-size: 13px; border: 1px solid var(--line); background: var(--card); color: var(--ink); white-space: nowrap; }
+.btn.primary { background: var(--ink); color: var(--page); border-color: transparent; }
+.btn.big { height: 40px; padding: 0 22px; font-size: 14px; border-radius: 10px; }
+.btn:disabled { opacity: .45; cursor: default; }
+.select { height: 34px; padding: 0 10px; border-radius: 9px; border: 1px solid var(--line); background: var(--card); color: var(--ink); font: 500 13px var(--font); cursor: pointer; max-width: 60%; }
+.select:focus-visible { outline: 2px solid var(--vscode-focusBorder, var(--ink)); outline-offset: 2px; }
+
+.news { display: flex; align-items: center; gap: 12px; padding: 14px 16px; }
+.news .t { flex: 1; min-width: 0; }
+.news .t b { font-weight: 600; display: block; }
+.news .t small { display: block; color: var(--ink-3); font-size: 12.5px; }
+.news-open { display: flex; align-items: center; gap: 12px; flex: 1; min-width: 0; }
+.x { width: 28px; height: 28px; border-radius: 7px; display: grid; place-items: center; color: var(--ink-3); flex: none; }
+.x svg { width: 12px; height: 12px; }
+.ornus-mark { width: 28px; height: 28px; border-radius: 8px; background: var(--ink); color: var(--page); display: grid; place-items: center; font-weight: 700; font-size: 13px; flex: none; }
+
+.banner { display: flex; align-items: center; gap: 12px; padding: 12px 14px 12px 16px; border-radius: 12px; background: var(--card); border: 1px solid var(--line); margin-bottom: 24px; }
+.banner .t { flex: 1; }
+
+.notice { padding: 16px; }
+.notice b { display: block; font-weight: 600; margin-bottom: 4px; }
+.notice p { color: var(--ink-2); margin: 0; }
+.notice .btn { margin-top: 12px; }
+.notice-wrap { margin-bottom: 40px; }
+
+.foot { margin-top: 32px; text-align: center; font-size: 12px; color: var(--ink-3); }
+.foot > span { unicode-bidi: isolate; }
+.foot > span + span::before { content: "·"; margin: 0 8px; }
+
+.center { text-align: center; padding: 64px 8px 8px; }
+.center .mascot { width: 88px; height: 80px; color: var(--mascot); margin: 0 auto 16px; display: block; }
+.center h2 { font-size: 19px; font-weight: 650; margin: 0 0 8px; }
+.center p { color: var(--ink-2); margin: 0 auto 20px; max-width: 360px; }
+.center .fine { font-size: 12.5px; color: var(--ink-3); margin-top: 14px; }
+
+.spin { width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--line); border-top-color: var(--ink-2); animation: spin .9s linear infinite; flex: none; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Feedback dialog: the "Send feedback" modal pattern of ChatGPT and VS Code — one text box, one main action. */
+dialog.fb { width: min(480px, calc(100vw - 32px)); padding: 0; border: 1px solid var(--line); border-radius: 14px; background: var(--card); color: var(--ink); box-shadow: 0 12px 40px rgba(0,0,0,.25); }
+dialog.fb::backdrop { background: rgba(0,0,0,.45); }
+.fb-in { padding: 20px; display: flex; flex-direction: column; gap: 14px; }
+.fb-head { display: flex; align-items: center; gap: 12px; }
+.fb-head h2, .fb-done h2 { flex: 1; margin: 0; font-size: 16px; font-weight: 650; }
+.seg { display: inline-flex; align-self: flex-start; padding: 3px; gap: 2px; border-radius: 10px; background: color-mix(in srgb, var(--ink) 6%, transparent); }
+.seg button { height: 30px; padding: 0 14px; border-radius: 8px; font-size: 13px; font-weight: 500; color: var(--ink-2); }
+.seg button[aria-checked="true"] { background: var(--card); color: var(--ink); box-shadow: 0 1px 2px rgba(0,0,0,.12); }
+body.vscode-dark .seg button[aria-checked="true"], body.vscode-high-contrast:not(.vscode-high-contrast-light) .seg button[aria-checked="true"] { background: color-mix(in srgb, var(--ink) 16%, var(--card)); }
+.fb textarea, .fb-email { width: 100%; border: 1px solid var(--line); border-radius: 10px; background: var(--page); color: var(--ink); font: 14px/1.5 var(--font); padding: 10px 12px; }
+.fb textarea { min-height: 140px; resize: vertical; }
+.fb textarea:focus-visible, .fb-email:focus-visible, .fb-check input:focus-visible { outline: 2px solid var(--vscode-focusBorder, var(--ink)); outline-offset: 1px; }
+.fb textarea::placeholder, .fb-email::placeholder { color: var(--ink-3); }
+.fb-check { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--ink-2); cursor: pointer; }
+.fb-check input { margin: 0; accent-color: var(--ink); }
+.fb-what { margin-top: 6px; }
+.fb-what summary { font-size: 12.5px; color: var(--ink-3); cursor: pointer; width: max-content; }
+.fb-details { margin: 8px 0 0; padding: 10px 12px; border-radius: 8px; background: var(--page); color: var(--ink-2); font: 12px/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; white-space: pre-wrap; word-break: break-word; direction: ltr; text-align: left; }
+.fb-error { margin: 0; color: var(--bad); font-size: 13px; }
+.fb-foot { display: flex; justify-content: flex-end; gap: 8px; }
+.fb-done { align-items: center; text-align: center; padding: 28px 20px 20px; }
+.fb-done .mascot { width: 66px; height: 60px; color: var(--mascot); }
+.fb-done .fb-foot { justify-content: center; }
+
+@media (max-width: 560px) {
+  .art { display: none; }
+  .panel { padding: 28px 14px 36px; }
+  .row .v { display: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .spin { animation: none; }
+  .tg, .tg::after { transition: none; }
+}

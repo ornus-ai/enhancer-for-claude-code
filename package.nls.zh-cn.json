@@ -1,0 +1,22 @@
+{
+  "description": "让 Claude Code 聊天更平静、更易读：从右到左文本（阿拉伯语、波斯语、乌尔都语、希伯来语等）、折叠工具行的扫帚、引用回复和引用工具，以及图片预览。与 Anthropic 无关联。",
+  "command.openPanel": "打开控制面板",
+  "command.enable": "开启从右到左文本",
+  "command.enableBroom": "开启扫帚（折叠工具行）",
+  "command.restore": "还原原始 Claude Code",
+  "command.status": "显示状态",
+  "view.welcome": "[打开控制面板](command:enhancer.openPanel)",
+  "config.language": "Enhancer 控制面板的语言。“自动”跟随编辑器的显示语言；如果 Enhancer 不支持该语言，则使用英语。",
+  "config.languageEverywhere": "在 Claude Code 聊天（其按钮和标签）、状态栏和通知中也使用 Enhancer 的语言。关闭时，只有控制面板会切换语言。",
+  "config.arabic": "Claude Code 聊天中的从右到左文本。包含从右到左书写语言（阿拉伯语、波斯语、乌尔都语、希伯来语等）字母的文本从右向左显示，即使以英文单词开头也是如此。",
+  "config.broom": "Claude Code 聊天中的扫帚按钮：单击可将工具行折叠为标题并隐藏已完成的思考，新的也会隐藏；再次单击则重新显示。每个工具行还有自己的 −/+。",
+  "config.broomStartsOn": "每次打开 Claude Code 聊天时扫帚默认开启：工具行折叠，已完成的思考隐藏。单击扫帚的效果持续到聊天重新加载。",
+  "config.broomButton": "在 Claude Code 消息框中显示扫帚按钮。隐藏后，每个工具行自带的 −/+ 和扫帚的初始状态仍然有效。",
+  "config.quoteReply": "在 Claude 的回复中选择文本即可出现“回复”和“复制”。“回复”会将所选内容作为卡片保留在消息框上方，并在你的下一条消息中作为引用发送。",
+  "config.quoteTools": "在 Claude Code 聊天中每条引用的角落显示“复制”和“选择”按钮。",
+  "config.imagePreview": "在工具行下方显示 Claude 读取、写入或提到的图片文件的缩略图；单击可放大，或在编辑器中打开该文件。",
+  "config.reapplyAfterUpdate": "在 Claude Code 更新或编辑器启动时再次应用增强功能。关闭后，新版本的 Claude Code 将保持原样，直到你在控制面板中应用。",
+  "config.checkForUpdates": "向你的编辑器所用的扩展商店（Visual Studio Marketplace 或 Open VSX）询问最新的 Enhancer 版本，并在有新版本时在控制面板中提示。不会发送任何关于你的信息。",
+  "config.ornusNews": "在控制面板中显示一条简短、可关闭的 Ornus 新闻，内容读取自 ornus.ai 上的一个小文本文件。不会发送任何关于你的信息。",
+  "config.feedbackButton": "在控制面板中显示“发送反馈”。只有在你点击“发送”时，才会向 Enhancer 团队发送消息，且只包含表单中显示的内容。"
+}
