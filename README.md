@@ -44,9 +44,9 @@ Scheduled checks apply every enhancement to recent Claude Code releases, apply i
 
 | Claude Code | macOS (Apple silicon) | Windows (x64) | Checked |
 |---|---|---|---|
-| 2.1.302 | ✅ 5 of 5 | Not verified yet | Oct 17 |
-| 2.1.301 | ✅ 5 of 5 | Not verified yet | Oct 17 |
-| 2.1.300 | ✅ 5 of 5 | Not verified yet | Oct 17 |
+| 2.1.312 | ✅ 5 of 5 | ✅ 5 of 5 | Oct 28 |
+| 2.1.311 | ✅ 5 of 5 | ✅ 5 of 5 | Oct 28 |
+| 2.1.310 | ✅ 5 of 5 | ✅ 5 of 5 | Oct 28 |
 
 These are patch and restore checks: they prove an enhancement fits and undoes cleanly, not that it was used in a live chat. On a new Claude Code version, Enhancer tries each enhancement; one that fails its checks is left out and shows **Waiting for an update**.
 
