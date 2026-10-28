@@ -1,0 +1,71 @@
+{
+  "2.1.312": {
+    "version": "2.1.312",
+    "platform": "win32-x64",
+    "checkedAt": "2026-10-28T05:36:47.816Z",
+    "safety": "ok",
+    "features": {
+      "rtl": {
+        "state": "active"
+      },
+      "broom": {
+        "state": "active"
+      },
+      "quoteReply": {
+        "state": "active"
+      },
+      "quoteTools": {
+        "state": "active"
+      },
+      "imagePreview": {
+        "state": "active"
+      }
+    }
+  },
+  "2.1.311": {
+    "version": "2.1.311",
+    "platform": "win32-x64",
+    "checkedAt": "2026-10-28T05:37:24.754Z",
+    "safety": "ok",
+    "features": {
+      "rtl": {
+        "state": "active"
+      },
+      "broom": {
+        "state": "active"
+      },
+      "quoteReply": {
+        "state": "active"
+      },
+      "quoteTools": {
+        "state": "active"
+      },
+      "imagePreview": {
+        "state": "active"
+      }
+    }
+  },
+  "2.1.310": {
+    "version": "2.1.310",
+    "platform": "win32-x64",
+    "checkedAt": "2026-10-28T05:38:10.530Z",
+    "safety": "ok",
+    "features": {
+      "rtl": {
+        "state": "active"
+      },
+      "broom": {
+        "state": "active"
+      },
+      "quoteReply": {
+        "state": "active"
+      },
+      "quoteTools": {
+        "state": "active"
+      },
+      "imagePreview": {
+        "state": "active"
+      }
+    }
+  }
+}
