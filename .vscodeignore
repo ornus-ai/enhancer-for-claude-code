@@ -22,3 +22,4 @@ CLAUDE.md
 *.vsix
 .env
 .env.*
+marketing/**
