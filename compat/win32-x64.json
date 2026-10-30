@@ -67,5 +67,28 @@
         "state": "active"
       }
     }
+  },
+  "2.1.314": {
+    "version": "2.1.314",
+    "platform": "win32-x64",
+    "checkedAt": "2026-10-30T01:19:05.244Z",
+    "safety": "ok",
+    "features": {
+      "rtl": {
+        "state": "active"
+      },
+      "broom": {
+        "state": "active"
+      },
+      "quoteReply": {
+        "state": "active"
+      },
+      "quoteTools": {
+        "state": "active"
+      },
+      "imagePreview": {
+        "state": "active"
+      }
+    }
   }
 }
