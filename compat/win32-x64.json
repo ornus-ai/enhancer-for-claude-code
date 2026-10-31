@@ -90,5 +90,28 @@
         "state": "active"
       }
     }
+  },
+  "2.1.316": {
+    "version": "2.1.316",
+    "platform": "win32-x64",
+    "checkedAt": "2026-10-31T07:11:11.688Z",
+    "safety": "ok",
+    "features": {
+      "rtl": {
+        "state": "active"
+      },
+      "broom": {
+        "state": "active"
+      },
+      "quoteReply": {
+        "state": "active"
+      },
+      "quoteTools": {
+        "state": "active"
+      },
+      "imagePreview": {
+        "state": "active"
+      }
+    }
   }
 }
