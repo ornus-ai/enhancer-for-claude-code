@@ -205,5 +205,28 @@
         "state": "active"
       }
     }
+  },
+  "2.1.318": {
+    "version": "2.1.318",
+    "platform": "darwin-arm64",
+    "checkedAt": "2026-11-04T07:33:57.434Z",
+    "safety": "ok",
+    "features": {
+      "rtl": {
+        "state": "active"
+      },
+      "broom": {
+        "state": "active"
+      },
+      "quoteReply": {
+        "state": "active"
+      },
+      "quoteTools": {
+        "state": "active"
+      },
+      "imagePreview": {
+        "state": "active"
+      }
+    }
   }
 }
