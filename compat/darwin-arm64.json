@@ -274,5 +274,28 @@
         "state": "active"
       }
     }
+  },
+  "2.1.322": {
+    "version": "2.1.322",
+    "platform": "darwin-arm64",
+    "checkedAt": "2026-11-11T01:23:23.405Z",
+    "safety": "ok",
+    "features": {
+      "rtl": {
+        "state": "active"
+      },
+      "broom": {
+        "state": "active"
+      },
+      "quoteReply": {
+        "state": "active"
+      },
+      "quoteTools": {
+        "state": "active"
+      },
+      "imagePreview": {
+        "state": "active"
+      }
+    }
   }
 }
