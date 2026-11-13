@@ -228,5 +228,28 @@
         "state": "active"
       }
     }
+  },
+  "2.1.323": {
+    "version": "2.1.323",
+    "platform": "win32-x64",
+    "checkedAt": "2026-11-13T01:27:15.348Z",
+    "safety": "ok",
+    "features": {
+      "rtl": {
+        "state": "active"
+      },
+      "broom": {
+        "state": "active"
+      },
+      "quoteReply": {
+        "state": "active"
+      },
+      "quoteTools": {
+        "state": "active"
+      },
+      "imagePreview": {
+        "state": "active"
+      }
+    }
   }
 }
