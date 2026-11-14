@@ -15,6 +15,7 @@ const input = (over: Partial<PanelInput> = {}): PanelInput => ({
   reapplyAfterUpdate: true,
   checkForUpdates: true,
   ornusNews: true,
+  ornusCard: true,
   feedbackButton: true, feedbackDetails: { extension: '0.1.0', claudeCode: '2.1.301', editor: 'Visual Studio Code 1.105.0', os: 'darwin arm64' },
   feedbackAnswers: [],
   claudeCode: { status: enhanced },
@@ -186,5 +187,15 @@ describe('control panel state', () => {
     assert.equal(resultForFolder(last, '/ext/anthropic.claude-code-2.1.302'), undefined)
     assert.equal(resultForFolder(last, undefined), undefined)
     assert.equal(resultForFolder(undefined, '/ext/x'), undefined)
+  })
+
+  test('the Ornus card shows on a calm panel when its switch is on, never beside a problem', () => {
+    assert.deepEqual(panelState(input()).ornusCard, { on: true, shown: true })
+    assert.deepEqual(panelState(input({ ornusCard: false })).ornusCard, { on: false, shown: false })
+    const troubled = panelState(input({ claudeCode: { status: { ...enhanced, files: 'modified-elsewhere' } }, lastResult: { outcome: 'modified-elsewhere', reason: 'x' } }))
+    assert.deepEqual(troubled.ornusCard, { on: true, shown: false })
+    const partial = panelState(input({ claudeCode: { status: { ...enhanced, appliedFeatures: ['rtl'] } } }))
+    assert.equal(partial.status.kind, 'partial')
+    assert.deepEqual(partial.ornusCard, { on: true, shown: false })
   })
 })

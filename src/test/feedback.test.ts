@@ -299,3 +299,25 @@ describe('feedback from the extension', () => {
     assert.deepEqual(parsePanelMessage({ type: 'setOption', setting: 'feedbackButton', on: false }), { type: 'setOption', setting: 'feedbackButton', on: false })
   })
 })
+
+describe('the Ornus news file the worker serves', () => {
+  test('every item passes the control panel\'s own news rules, so none is dropped on the way', async () => {
+    const { NEWS_FILE } = await import('../feedbackWorker/news.ts')
+    const { newsItemsFrom } = await import('../panel/news.ts')
+    const kept = newsItemsFrom(JSON.parse(JSON.stringify(NEWS_FILE)), new Date('2026-11-14T12:00:00Z'))
+    assert.equal(kept.length, NEWS_FILE.items.length)
+    assert.equal(kept[0].id, 'ornus-is-here')
+  })
+
+  test('the worker answers GET /enhancer/news.json with the file, and leaves every other path to feedback', async () => {
+    const worker = (await import('../feedbackWorker/worker.ts')).default
+    const env = {} as FeedbackEnv
+    const news = await worker.fetch(new Request('https://ornus.ai/enhancer/news.json'), env)
+    assert.equal(news.status, 200)
+    assert.equal(news.headers.get('content-type'), 'application/json; charset=utf-8')
+    assert.equal(((await news.json()) as { items: { id: string }[] }).items[0].id, 'ornus-is-here')
+    assert.equal((await worker.fetch(new Request('https://ornus.ai/enhancer/news.json', { method: 'POST', body: '{}' }), env)).status, 405)
+    // GET on the feedback path is still refused by the feedback handler.
+    assert.equal((await worker.fetch(new Request('https://ornus.ai/enhancer/feedback'), env)).status, 405)
+  })
+})

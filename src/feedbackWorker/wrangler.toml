@@ -5,7 +5,11 @@ name = "enhancer-feedback"
 main = "worker.ts"
 compatibility_date = "2026-10-01"
 workers_dev = false
-routes = [{ pattern = "ornus.ai/enhancer/feedback", zone_name = "ornus.ai" }]
+# The second route serves the control panel's Ornus news file (news.ts).
+routes = [
+  { pattern = "ornus.ai/enhancer/feedback", zone_name = "ornus.ai" },
+  { pattern = "ornus.ai/enhancer/news.json", zone_name = "ornus.ai" },
+]
 
 # What the worker remembers: recent message fingerprints (repeat filter) and each sender's
 # count for the day (daily cap). Keys expire by themselves.

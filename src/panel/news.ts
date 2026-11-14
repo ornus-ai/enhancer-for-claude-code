@@ -74,4 +74,10 @@ export function campaignLink (url: string) {
 }
 
 // Ornus is released (2026-10-28): the button leads to its download page (PLAN §7 Launch).
+// The page picks the visitor's system itself (macOS download, Windows download or waitlist).
 export const ORNUS_DOWNLOAD_URL = campaignLink('https://ornus.ai/download')
+// ornus.ai has English and Arabic pages; a panel in Arabic opens the Arabic one.
+const ORNUS_DOWNLOAD_URL_AR = campaignLink('https://ornus.ai/ar/download')
+
+/** The Ornus download page in the panel's language (Arabic or English). */
+export const ornusDownloadUrl = (lang: string) => lang === 'ar' ? ORNUS_DOWNLOAD_URL_AR : ORNUS_DOWNLOAD_URL

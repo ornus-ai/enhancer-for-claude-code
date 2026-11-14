@@ -16,8 +16,12 @@ export type PanelHost = {
 
 let current: vscode.WebviewPanel | undefined
 
-export function panelHtml (options: { cspSource: string; cssUri: string; scriptUri: string; lang: string; dir: 'ltr' | 'rtl'; nonce: string }) {
-  const { cspSource, cssUri, scriptUri, lang, dir, nonce } = options
+/** The Ornus card's picture, English and Arabic (webview URIs of the extension's own media). */
+export type OrnusArt = { en: string; ar: string }
+
+export function panelHtml (options: { cspSource: string; cssUri: string; scriptUri: string; lang: string; dir: 'ltr' | 'rtl'; nonce: string; ornusArt?: OrnusArt }) {
+  const { cspSource, cssUri, scriptUri, lang, dir, nonce, ornusArt } = options
+  const art = ornusArt ? ` data-ornus-art="${ornusArt.en}" data-ornus-art-ar="${ornusArt.ar}"` : ''
   return `<!doctype html>
 <html lang="${lang}" dir="${dir}">
 <head>
@@ -27,7 +31,7 @@ export function panelHtml (options: { cspSource: string; cssUri: string; scriptU
 <link rel="stylesheet" href="${cssUri}">
 <title>Enhancer</title>
 </head>
-<body>
+<body${art}>
 <div id="app"></div>
 <script nonce="${nonce}" src="${scriptUri}"></script>
 </body>
@@ -66,6 +70,10 @@ export function showPanel (context: vscode.ExtensionContext, host: PanelHost) {
     lang: host.meta().lang,
     dir: host.meta().dir,
     nonce: crypto.randomBytes(16).toString('base64'),
+    ornusArt: {
+      en: panel.webview.asWebviewUri(vscode.Uri.joinPath(media, 'ornus-showcase.webp')).toString(),
+      ar: panel.webview.asWebviewUri(vscode.Uri.joinPath(media, 'ornus-showcase-ar.webp')).toString(),
+    },
   })
   panel.onDidDispose(() => { if (current === panel) current = undefined }, null, context.subscriptions)
   // A hidden tab drops its page; it asks again with "ready" when shown.

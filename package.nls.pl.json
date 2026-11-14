@@ -18,5 +18,6 @@
   "config.reapplyAfterUpdate": "Stosuj ulepszenia ponownie, gdy Claude Code się aktualizuje lub uruchamia się edytor. Gdy wyłączone, nowa wersja Claude Code pozostaje oryginalna, dopóki nie zastosujesz ulepszeń z panelu sterowania.",
   "config.checkForUpdates": "Pytaj sklep z rozszerzeniami Twojego edytora (Visual Studio Marketplace lub Open VSX) o najnowszą wersję Enhancer i informuj w panelu sterowania, gdy jest nowsza. Nie wysyła niczego o Tobie.",
   "config.ornusNews": "Pokaż w panelu sterowania jedną krótką, zamykaną nowość Ornus, odczytaną z małego pliku tekstowego na ornus.ai. Nie wysyła niczego o Tobie.",
-  "config.feedbackButton": "Pokaż „Wyślij opinię” w panelu sterowania. Wiadomość trafia do zespołu Enhancer tylko po naciśnięciu Wyślij i zawiera wyłącznie to, co pokazuje formularz."
+  "config.feedbackButton": "Pokaż „Wyślij opinię” w panelu sterowania. Wiadomość trafia do zespołu Enhancer tylko po naciśnięciu Wyślij i zawiera wyłącznie to, co pokazuje formularz.",
+  "config.ornusCard": "Pokazuj kartę Ornus z obrazem Ornus w panelu sterowania. Nie wysyła nic o Tobie."
 }

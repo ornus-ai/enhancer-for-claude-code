@@ -18,5 +18,6 @@
   "config.reapplyAfterUpdate": "Die Verbesserungen erneut anwenden, wenn Claude Code aktualisiert wird oder der Editor startet. Wenn aus, bleibt eine neue Claude-Code-Version original, bis du sie im Bedienfeld anwendest.",
   "config.checkForUpdates": "Den Erweiterungs-Store deines Editors (Visual Studio Marketplace oder Open VSX) nach der neuesten Enhancer-Version fragen und im Bedienfeld melden, wenn es eine neuere gibt. Sendet nichts über dich.",
   "config.ornusNews": "Eine kurze, schließbare Ornus-News im Bedienfeld anzeigen, gelesen aus einer kleinen Textdatei auf ornus.ai. Sendet nichts über dich.",
-  "config.feedbackButton": "Zeige „Feedback senden“ im Bedienfeld. Eine Nachricht geht nur dann an das Enhancer-Team, wenn du auf Senden drückst, und nur mit dem, was das Formular zeigt."
+  "config.feedbackButton": "Zeige „Feedback senden“ im Bedienfeld. Eine Nachricht geht nur dann an das Enhancer-Team, wenn du auf Senden drückst, und nur mit dem, was das Formular zeigt.",
+  "config.ornusCard": "Zeigt die Ornus-Karte mit einem Bild von Ornus in der Systemsteuerung. Sendet nichts über dich."
 }

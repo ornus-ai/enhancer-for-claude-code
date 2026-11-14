@@ -3,7 +3,7 @@ import { describe, test } from 'node:test'
 
 import { turnedOnFrom } from '../features.ts'
 import { parsePanelMessage } from '../panel/messages.ts'
-import { ORNUS_DOWNLOAD_URL, campaignLink, isApprovedLink, newsItemsFrom, newsToShow } from '../panel/news.ts'
+import { ORNUS_DOWNLOAD_URL, campaignLink, ornusDownloadUrl, isApprovedLink, newsItemsFrom, newsToShow } from '../panel/news.ts'
 import { checkFrom, isNewer, latestMarketplaceVersion, latestOpenVsxVersion, storeFor } from '../panel/updates.ts'
 
 const NOW = new Date('2026-10-17T12:00:00Z')
@@ -76,6 +76,12 @@ describe('Ornus news', () => {
     assert.equal(campaignLink('https://ornus.ai/download?x=1'), 'https://ornus.ai/download?x=1&utm_source=enhancer&utm_medium=panel')
     assert.equal(ORNUS_DOWNLOAD_URL, 'https://ornus.ai/download?utm_source=enhancer&utm_medium=panel')
   })
+
+  test('the Ornus download page opens in Arabic for an Arabic panel, in English otherwise', () => {
+    assert.equal(ornusDownloadUrl('ar'), 'https://ornus.ai/ar/download?utm_source=enhancer&utm_medium=panel')
+    assert.equal(ornusDownloadUrl('en'), 'https://ornus.ai/download?utm_source=enhancer&utm_medium=panel')
+    assert.equal(ornusDownloadUrl('fa'), 'https://ornus.ai/download?utm_source=enhancer&utm_medium=panel')
+  })
 })
 
 describe('update check', () => {
@@ -136,6 +142,7 @@ describe('panel messages', () => {
     assert.deepEqual(parsePanelMessage({ type: 'turnOn' }), { type: 'turnOn' })
     assert.deepEqual(parsePanelMessage({ type: 'setFeature', setting: 'broom', on: false }), { type: 'setFeature', setting: 'broom', on: false })
     assert.deepEqual(parsePanelMessage({ type: 'setOption', setting: 'ornusNews', on: true }), { type: 'setOption', setting: 'ornusNews', on: true })
+    assert.deepEqual(parsePanelMessage({ type: 'setOption', setting: 'ornusCard', on: false }), { type: 'setOption', setting: 'ornusCard', on: false })
     assert.deepEqual(parsePanelMessage({ type: 'setInterface', setting: 'broomStartsOn', on: true }), { type: 'setInterface', setting: 'broomStartsOn', on: true })
     assert.deepEqual(parsePanelMessage({ type: 'setInterface', setting: 'broomButton', on: false }), { type: 'setInterface', setting: 'broomButton', on: false })
     assert.deepEqual(parsePanelMessage({ type: 'dismissNews', id: 'launch-1' }), { type: 'dismissNews', id: 'launch-1' })

@@ -23,6 +23,7 @@ const base: PanelInput = {
   reapplyAfterUpdate: true,
   checkForUpdates: true,
   ornusNews: true,
+  ornusCard: true,
   feedbackButton: true, feedbackDetails: { extension: '0.1.0', claudeCode: '2.1.301', editor: 'Visual Studio Code 1.105.0', os: 'darwin arm64' },
   feedbackAnswers: [],
   claudeCode: { status: enhanced },
@@ -106,6 +107,42 @@ describe('control panel page', { skip: CHROME ? false : 'Chrome not found' }, ()
       { type: 'restore' },
       { type: 'downloadOrnus' },
       { type: 'setOption', setting: 'ornusNews', on: false },
+    ])
+  })
+
+  test('Ornus card: the picture in the panel language, the line and a filled Download on a calm panel; × turns the card off; a plain button beside a banner or a problem', () => {
+    const pixel = 'data:image/gif;base64,R0lGODlhAQABAAAAACw='
+    const withBanner = panelState({ ...base, reloadPending: true })
+    const troubled = panelState({ ...base, claudeCode: { status: { ...enhanced, files: 'modified-elsewhere' } }, lastResult: { outcome: 'modified-elsewhere', reason: 'x' } })
+    const off = panelState({ ...base, ornusCard: false })
+    const draw = (lang: LanguageId, states: unknown[]) => run(lang, states, `
+      document.body.dataset.ornusArt = '${pixel}#en'; document.body.dataset.ornusArtAr = '${pixel}#ar';
+      const look = () => ({
+        card: !!q('#ornus-card'),
+        picture: q('#ornus-card img') ? q('#ornus-card img').getAttribute('src').split('#')[1] : null,
+        name: q('#row-download-ornus b') ? q('#row-download-ornus b').textContent : null,
+        line: q('#row-download-ornus small') ? q('#row-download-ornus small').textContent : null,
+        filled: q('#row-download-ornus .btn').classList.contains('primary'),
+        cardSwitch: q('#row-ornus-card [role=switch]').getAttribute('aria-checked'),
+        afterEnhancements: q('#section-enhancements').nextElementSibling.id,
+      });
+      out.views = [];
+      for (const s of states) { send(s); await wait(); out.views.push(look()); }
+      send(states[0]); await wait();
+      click('#ornus-card .ornus-hide');
+      click('#row-download-ornus .btn');
+    `)
+    const en = draw('en', [panelState(base), withBanner, troubled, off])
+    assert.deepEqual(en.views, [
+      { card: true, picture: 'en', name: 'Ornus', line: 'Build your product with an AI team, in one workspace.', filled: true, cardSwitch: 'true', afterEnhancements: 'section-ornus' },
+      { card: true, picture: 'en', name: 'Ornus', line: 'Build your product with an AI team, in one workspace.', filled: false, cardSwitch: 'true', afterEnhancements: 'section-ornus' },
+      { card: false, picture: null, name: null, line: null, filled: false, cardSwitch: 'true', afterEnhancements: 'section-ornus' },
+      { card: false, picture: null, name: null, line: null, filled: false, cardSwitch: 'false', afterEnhancements: 'section-ornus' },
+    ])
+    assert.deepEqual(en.sent, [{ type: 'ready' }, { type: 'setOption', setting: 'ornusCard', on: false }, { type: 'downloadOrnus' }])
+    const ar = draw('ar', [panelState(base)])
+    assert.deepEqual(ar.views, [
+      { card: true, picture: 'ar', name: 'Ornus', line: 'ابنِ منتجك مع فريق ذكاء اصطناعي، في مساحة عمل واحدة.', filled: true, cardSwitch: 'true', afterEnhancements: 'section-ornus' },
     ])
   })
 

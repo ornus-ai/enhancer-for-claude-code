@@ -18,5 +18,6 @@
   "config.reapplyAfterUpdate": "Terapkan peningkatan lagi saat Claude Code diperbarui atau editor dimulai. Jika nonaktif, versi Claude Code baru tetap asli sampai Anda menerapkannya dari panel kontrol.",
   "config.checkForUpdates": "Tanyakan versi Enhancer terbaru ke toko ekstensi editor Anda (Visual Studio Marketplace atau Open VSX) dan beri tahu di panel kontrol jika ada yang lebih baru. Tidak mengirim apa pun tentang Anda.",
   "config.ornusNews": "Tampilkan satu berita Ornus singkat yang dapat ditutup di panel kontrol, dibaca dari file teks kecil di ornus.ai. Tidak mengirim apa pun tentang Anda.",
-  "config.feedbackButton": "Tampilkan “Kirim masukan” di panel kontrol. Pesan hanya dikirim ke tim Enhancer saat Anda menekan Kirim, dan hanya berisi apa yang ditampilkan formulir."
+  "config.feedbackButton": "Tampilkan “Kirim masukan” di panel kontrol. Pesan hanya dikirim ke tim Enhancer saat Anda menekan Kirim, dan hanya berisi apa yang ditampilkan formulir.",
+  "config.ornusCard": "Tampilkan kartu Ornus, dengan gambar Ornus, di panel kontrol. Tidak mengirim apa pun tentang Anda."
 }

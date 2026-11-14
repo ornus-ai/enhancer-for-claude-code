@@ -1,4 +1,5 @@
-// Cloudflare Worker on ornus.ai/enhancer/feedback: takes one feedback message from the
+// Cloudflare Worker on ornus.ai/enhancer/feedback (and ornus.ai/enhancer/news.json, the panel's
+// Ornus news file: news.ts): takes one feedback message from the
 // Enhancer control panel (src/panel/feedback.ts, FeedbackRequest v1) and forwards it to the
 // owner's Telegram chat. It stores nothing; the sender's address is used only by the rate
 // limits. Deployed with wrangler from this folder (see wrangler.toml); not shipped in the
@@ -22,6 +23,8 @@
 // written, not atomic, so two sends at the same instant may both pass (a Durable Object
 // would make it exact); if KV fails (down, or its write quota used up) feedback still flows
 // under the per-minute limits rather than being lost, so the daily cap pauses meanwhile.
+
+import { handleNews } from './news.ts'
 
 export const BODY_MAX_BYTES = 8 * 1024
 const TEXT_MAX = 2000
@@ -198,5 +201,6 @@ export async function handleFeedback (request: Request, env: FeedbackEnv, fetchI
 }
 
 export default {
-  fetch: (request: Request, env: FeedbackEnv) => handleFeedback(request, env),
+  fetch: (request: Request, env: FeedbackEnv) =>
+    new URL(request.url).pathname === '/enhancer/news.json' ? handleNews(request) : handleFeedback(request, env),
 }

@@ -18,5 +18,6 @@
   "config.reapplyAfterUpdate": "Claude Code güncellendiğinde veya düzenleyici başladığında geliştirmeleri yeniden uygula. Kapalıyken yeni bir Claude Code sürümü, denetim masasından uygulayana kadar özgün kalır.",
   "config.checkForUpdates": "Düzenleyicinizin eklenti mağazasından (Visual Studio Marketplace veya Open VSX) en son Enhancer sürümünü sor ve daha yeni bir sürüm olduğunda denetim masasında bildir. Sizinle ilgili hiçbir şey göndermez.",
   "config.ornusNews": "Denetim masasında, ornus.ai üzerindeki küçük bir metin dosyasından okunan, kapatılabilir kısa bir Ornus haberi göster. Sizinle ilgili hiçbir şey göndermez.",
-  "config.feedbackButton": "Denetim masasında “Geri bildirim gönder” seçeneğini göster. Enhancer ekibine yalnızca Gönder'e bastığınızda ve yalnızca formun gösterdiği içerikle bir ileti gönderilir."
+  "config.feedbackButton": "Denetim masasında “Geri bildirim gönder” seçeneğini göster. Enhancer ekibine yalnızca Gönder'e bastığınızda ve yalnızca formun gösterdiği içerikle bir ileti gönderilir.",
+  "config.ornusCard": "Kontrol panelinde Ornus görseli içeren Ornus kartını gösterir. Senin hakkında hiçbir şey göndermez."
 }

@@ -18,5 +18,6 @@
   "config.reapplyAfterUpdate": "Áp dụng lại các tính năng nâng cao khi Claude Code cập nhật hoặc trình soạn thảo khởi động. Khi tắt, phiên bản Claude Code mới sẽ giữ nguyên trạng thái gốc cho đến khi bạn áp dụng từ bảng điều khiển.",
   "config.checkForUpdates": "Hỏi cửa hàng tiện ích của trình soạn thảo bạn dùng (Visual Studio Marketplace hoặc Open VSX) về phiên bản Enhancer mới nhất và báo trong bảng điều khiển khi có bản mới hơn. Không gửi bất cứ điều gì về bạn.",
   "config.ornusNews": "Hiện một tin tức Ornus ngắn, có thể đóng, trong bảng điều khiển, đọc từ một tệp văn bản nhỏ trên ornus.ai. Không gửi bất cứ điều gì về bạn.",
-  "config.feedbackButton": "Hiện “Gửi phản hồi” trong bảng điều khiển. Tin nhắn chỉ được gửi đến nhóm Enhancer khi bạn nhấn Gửi, và chỉ gồm những gì biểu mẫu hiển thị."
+  "config.feedbackButton": "Hiện “Gửi phản hồi” trong bảng điều khiển. Tin nhắn chỉ được gửi đến nhóm Enhancer khi bạn nhấn Gửi, và chỉ gồm những gì biểu mẫu hiển thị.",
+  "config.ornusCard": "Hiện thẻ Ornus kèm hình ảnh Ornus trong bảng điều khiển. Không gửi bất cứ thông tin nào về bạn."
 }

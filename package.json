@@ -2,7 +2,7 @@
   "name": "enhancer-for-claude-code",
   "displayName": "Enhancer for Claude Code",
   "description": "%description%",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "publisher": "enhancer",
   "license": "Apache-2.0",
   "repository": {
@@ -208,6 +208,12 @@
           "default": true,
           "scope": "application",
           "description": "%config.feedbackButton%"
+        },
+        "enhancer.ornusCard": {
+          "type": "boolean",
+          "default": true,
+          "scope": "application",
+          "description": "%config.ornusCard%"
         }
       }
     }

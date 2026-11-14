@@ -20,6 +20,7 @@ const input = (over: Partial<PanelInput> = {}): PanelInput => ({
   reapplyAfterUpdate: true,
   checkForUpdates: true,
   ornusNews: true,
+  ornusCard: true,
   feedbackButton: true,
   feedbackDetails: { extension: '0.1.0', claudeCode: '2.1.302', editor: 'Visual Studio Code 1.105.0', os: 'darwin arm64' },
   feedbackAnswers: [],

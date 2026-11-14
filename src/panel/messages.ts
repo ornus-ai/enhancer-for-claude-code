@@ -7,7 +7,7 @@ import { FEEDBACK_EMAIL_MAX, FEEDBACK_KINDS, FEEDBACK_TEXT_MAX } from './feedbac
 import type { FeedbackDraft } from './feedback.ts'
 import type { LanguageSetting } from '../i18n/index.ts'
 
-export const OPTION_SETTINGS = ['reapplyAfterUpdate', 'checkForUpdates', 'ornusNews', 'feedbackButton'] as const
+export const OPTION_SETTINGS = ['reapplyAfterUpdate', 'checkForUpdates', 'ornusNews', 'feedbackButton', 'ornusCard'] as const
 export type OptionSetting = (typeof OPTION_SETTINGS)[number]
 
 export type PanelMessage =

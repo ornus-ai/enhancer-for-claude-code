@@ -18,5 +18,6 @@
   "config.reapplyAfterUpdate": "Claude Code の更新時またはエディターの起動時に、拡張機能を再適用します。オフの場合、新しいバージョンの Claude Code は、コントロールパネルから適用するまで元のままです。",
   "config.checkForUpdates": "お使いのエディターの拡張機能ストア（Visual Studio Marketplace または Open VSX）に Enhancer の最新バージョンを問い合わせ、新しいバージョンがあればコントロールパネルでお知らせします。あなたに関する情報は一切送信しません。",
   "config.ornusNews": "ornus.ai の小さなテキストファイルから読み込んだ、閉じられる短い Ornus ニュースを 1 件、コントロールパネルに表示します。あなたに関する情報は一切送信しません。",
-  "config.feedbackButton": "コントロールパネルに「フィードバックを送信」を表示します。メッセージは、送信を押したときにだけ、フォームに表示された内容のみが Enhancer チームに送られます。"
+  "config.feedbackButton": "コントロールパネルに「フィードバックを送信」を表示します。メッセージは、送信を押したときにだけ、フォームに表示された内容のみが Enhancer チームに送られます。",
+  "config.ornusCard": "コントロールパネルに Ornus の画像付きカードを表示します。あなたについての情報は何も送信しません。"
 }

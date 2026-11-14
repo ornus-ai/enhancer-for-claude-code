@@ -14,7 +14,7 @@ import { fill, isLanguageSetting, resolveLanguage, textFor } from './i18n/index.
 import { feedbackRequest, isSendable, postFeedback } from './panel/feedback.ts'
 import type { FeedbackResult } from './panel/feedback.ts'
 import type { PanelMessage } from './panel/messages.ts'
-import { ORNUS_DOWNLOAD_URL, NEWS_URL, campaignLink, isApprovedLink, newsItemsFrom, newsToShow } from './panel/news.ts'
+import { ornusDownloadUrl, NEWS_URL, campaignLink, isApprovedLink, newsItemsFrom, newsToShow } from './panel/news.ts'
 import type { NewsItem } from './panel/news.ts'
 import { isPanelVisible, refreshPanel, showPanel } from './panel/panel.ts'
 import type { PanelHost } from './panel/panel.ts'
@@ -98,6 +98,7 @@ async function currentPanelState () {
     checkForUpdates: settings.get<boolean>('checkForUpdates') ?? true,
     ornusNews: settings.get<boolean>('ornusNews') ?? true,
     feedbackButton: settings.get<boolean>('feedbackButton') ?? true,
+    ornusCard: settings.get<boolean>('ornusCard') ?? true,
     feedbackAnswers,
     feedbackDetails: {
       extension: ownVersion(),
@@ -305,7 +306,7 @@ async function onPanelMessage (message: PanelMessage) {
       return
     }
     case 'openLog': return output.show(true)
-    case 'downloadOrnus': return void await vscode.env.openExternal(vscode.Uri.parse(ORNUS_DOWNLOAD_URL))
+    case 'downloadOrnus': return void await vscode.env.openExternal(vscode.Uri.parse(ornusDownloadUrl(panelLanguage())))
     case 'openNews': {
       const news = currentNews()
       if (news && isApprovedLink(news.url)) await vscode.env.openExternal(vscode.Uri.parse(campaignLink(news.url)))

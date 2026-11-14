@@ -19,6 +19,8 @@ export type PanelInput = {
   ornusNews: boolean
   /** `enhancer.feedbackButton`: the "Send feedback" row shows in the panel. */
   feedbackButton: boolean
+  /** `enhancer.ornusCard`: the Ornus section shows its picture card (on a calm panel only). */
+  ornusCard: boolean
   /** The technical details a feedback message may carry, without the enhancements line (added here from the rows). */
   feedbackDetails: Omit<FeedbackDetails, 'features'>
   /** The answers to the last feedback sends of this window, by the id the page gave each. */
@@ -79,6 +81,8 @@ export type PanelState = {
   reapplyAfterUpdate: boolean
   checkForUpdates: boolean
   ornusNews: boolean
+  /** The `enhancer.ornusCard` switch, and whether the card shows now (on, and the panel is calm). */
+  ornusCard: { on: boolean; shown: boolean }
   feedback: { button: boolean; details: FeedbackDetails; answers: { id: string; result: FeedbackResult }[] }
   /** The Interface section's broom choices; `available` is false while the broom itself is off. */
   broomOptions: { startsOn: boolean; button: boolean; available: boolean }
@@ -123,13 +127,15 @@ export function panelState (input: PanelInput): PanelState {
     reapplyAfterUpdate: input.reapplyAfterUpdate,
     checkForUpdates: input.checkForUpdates,
     ornusNews: input.ornusNews,
+    // Like the news slot, the Ornus card never shows beside a problem: only on a calm panel.
+    ornusCard: { on: input.ornusCard, shown: false },
     feedback: { button: input.feedbackButton, details: { ...input.feedbackDetails, features: featuresSummary(features) }, answers: input.feedbackAnswers },
     broomOptions: { startsOn: options.broomStartsOn, button: options.broomButton, available: features.some(f => f.id === 'broom' && f.on) },
     language: input.language,
     canTurnOn: input.claudeCode !== undefined && !input.syncing,
   }
   const calm = (state: Omit<PanelState, keyof typeof base>): PanelState =>
-    ({ ...base, ...state, news: input.ornusNews ? input.news : undefined })
+    ({ ...base, ...state, news: input.ornusNews ? input.news : undefined, ornusCard: { on: input.ornusCard, shown: input.ornusCard } })
   const troubled = (state: Omit<PanelState, keyof typeof base>): PanelState => ({ ...base, ...state })
 
   if (!input.turnedOn) {

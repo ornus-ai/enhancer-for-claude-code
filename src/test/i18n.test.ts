@@ -200,7 +200,7 @@ describe('the chosen language reaches the chat', () => {
 describe('the control panel in a chosen language', { skip: !CHROME && 'Chrome is not installed on this machine' }, () => {
   test('in Persian: right to left, Persian texts, every language listed in itself; the list keeps the focus when the panel redraws; choosing one posts it', () => {
     const input: PanelInput = {
-      turnedOn: true, featureSetting: () => undefined, reapplyAfterUpdate: true, checkForUpdates: true, ornusNews: true,
+      turnedOn: true, featureSetting: () => undefined, reapplyAfterUpdate: true, checkForUpdates: true, ornusNews: true, ornusCard: true,
       feedbackButton: true, feedbackDetails: { extension: '0.1.0', claudeCode: '2.1.301', editor: 'Visual Studio Code 1.105.0', os: 'darwin arm64' },
   feedbackAnswers: [],
       claudeCode: { status: { version: '2.1.301', baseline: 'ok', files: 'enhanced', appliedFeatures: ['rtl', 'broom', 'quoteReply', 'quoteTools', 'imagePreview'] } },

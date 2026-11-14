@@ -177,6 +177,28 @@
         h('button', { className: 'x', 'data-action': 'dismissNews', 'data-id': n.id, title: t('dismiss'), 'aria-label': t('dismiss') }, icon('x'))))
   }
 
+  // The Ornus section: on a calm panel, a card with a picture of Ornus at work (ornus.ai's own
+  // hero, in the panel's language when it is Arabic), its line and the download button; the ×
+  // turns the card's switch off. Otherwise only the rows and a plain button.
+  function ornusSection (s) {
+    const card = s.ornusCard.shown
+    // One filled button per view: a banner's own action keeps it.
+    const filled = card && !s.reloadPending && !s.updateAvailable
+    const download = h('button', { className: filled ? 'btn primary' : 'btn', 'data-action': 'downloadOrnus' }, t('downloadOrnus'))
+    const art = document.body.dataset[meta.lang === 'ar' ? 'ornusArtAr' : 'ornusArt']
+    return h('div', { className: 'section', id: 'section-ornus' },
+      h('h2', { className: 'section-t' }, t('inOrnus')),
+      h('div', { className: 'card' },
+        card ? h('div', { className: 'ornus-card', id: 'ornus-card' },
+          art ? h('div', { className: 'ornus-shot', 'aria-hidden': 'true' }, h('img', { src: art, alt: '', draggable: false })) : null,
+          h('button', { className: 'x ornus-hide', 'data-action': 'hideOrnusCard', title: t('hideOrnusCard'), 'aria-label': t('hideOrnusCard') }, icon('x'))) : null,
+        h('div', { className: card ? 'row ornus-cap' : 'row', id: 'row-download-ornus' },
+          h('div', { className: 't' }, card ? [h('b', {}, 'Ornus'), h('small', {}, t('ornusTagline'))] : null), download),
+        lockedRow('notify', 'notify', 'o_notify', 'availableInOrnus'),
+        lockedRow('voice', 'voice', 'o_voice', 'availableInOrnus'),
+        lockedRow('diff', 'diff', 'o_diff', 'comingToOrnus')))
+  }
+
   function welcome (s) {
     return h('div', { className: 'panel', id: 'welcome' },
       h('div', { className: 'center' },
@@ -211,6 +233,7 @@
       h('div', { className: 'section', id: 'section-enhancements' },
         h('h2', { className: 'section-t' }, t('enhancements')),
         h('div', { className: 'card' }, s.features.map(f => featureRow(f, s.busy)))),
+      ornusSection(s),
       h('div', { className: 'section', id: 'section-interface' },
         h('h2', { className: 'section-t' }, t('interface')),
         h('div', { className: 'card' },
@@ -218,14 +241,8 @@
           optionRow('language-everywhere', 'i_languageEverywhere', s.language.everywhere, 'languageEverywhere', false, 'setInterface'),
           optionRow('broom-starts-on', 'i_broomStartsOn', s.broomOptions.startsOn, 'broomStartsOn', s.busy || !s.broomOptions.available, 'setInterface'),
           optionRow('broom-button', 'i_broomButton', s.broomOptions.button, 'broomButton', s.busy || !s.broomOptions.available, 'setInterface'),
-          optionRow('feedback-button', 'i_feedbackButton', s.feedback.button, 'feedbackButton', false))),
-      h('div', { className: 'section', id: 'section-ornus' },
-        h('h2', { className: 'section-t' }, t('inOrnus')),
-        h('div', { className: 'card' },
-          lockedRow('notify', 'notify', 'o_notify', 'availableInOrnus'),
-          lockedRow('voice', 'voice', 'o_voice', 'availableInOrnus'),
-          lockedRow('diff', 'diff', 'o_diff', 'comingToOrnus'),
-          h('div', { className: 'row', id: 'row-download-ornus' }, h('div', { className: 't' }), h('button', { className: 'btn', 'data-action': 'downloadOrnus' }, t('downloadOrnus'))))),
+          optionRow('feedback-button', 'i_feedbackButton', s.feedback.button, 'feedbackButton', false),
+          optionRow('ornus-card', 'i_ornusCard', s.ornusCard.on, 'ornusCard', false))),
       s.news ? newsSlot(s.news) : null,
       h('div', { className: 'section', id: 'section-privacy' },
         h('h2', { className: 'section-t' }, t('privacy'),
@@ -399,6 +416,7 @@
       send({ type: action, setting: el.dataset.setting, on })
       return
     }
+    if (action === 'hideOrnusCard') { send({ type: 'setOption', setting: 'ornusCard', on: false }); return }
     if (action === 'dismissNews') { send({ type: 'dismissNews', id: el.dataset.id }); return }
     if (action === 'featureProblem') { send({ type: 'featureProblem', id: el.dataset.feature }); return }
     send({ type: action })

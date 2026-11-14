@@ -18,5 +18,6 @@
   "config.reapplyAfterUpdate": "Claude Code가 업데이트되거나 편집기가 시작될 때 향상 기능을 다시 적용합니다. 끄면 새 Claude Code 버전은 제어판에서 적용하기 전까지 원래 상태로 유지됩니다.",
   "config.checkForUpdates": "사용 중인 편집기의 확장 스토어(Visual Studio Marketplace 또는 Open VSX)에 최신 Enhancer 버전을 문의하고, 새 버전이 있으면 제어판에서 알려 줍니다. 사용자에 대한 정보는 전송하지 않습니다.",
   "config.ornusNews": "ornus.ai의 작은 텍스트 파일에서 읽은, 닫을 수 있는 짧은 Ornus 소식 하나를 제어판에 표시합니다. 사용자에 대한 정보는 전송하지 않습니다.",
-  "config.feedbackButton": "제어판에 “피드백 보내기”를 표시합니다. 메시지는 보내기를 누를 때만, 양식에 표시된 내용만 Enhancer 팀에 전송됩니다."
+  "config.feedbackButton": "제어판에 “피드백 보내기”를 표시합니다. 메시지는 보내기를 누를 때만, 양식에 표시된 내용만 Enhancer 팀에 전송됩니다.",
+  "config.ornusCard": "제어판에 Ornus 이미지가 담긴 Ornus 카드를 표시합니다. 사용자에 관한 정보는 보내지 않습니다."
 }
