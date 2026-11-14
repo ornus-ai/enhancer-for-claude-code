@@ -5,6 +5,7 @@ every enhancement applied, applied again with no change, then restored byte for 
 
 | Claude Code | System | Arabic RTL | Broom | Quote reply | Quote tools | Image preview | Safe restore | Checked |
 |---|---|---|---|---|---|---|---|---|
+| 2.1.325 | darwin-arm64 | ✅ works | ✅ works | ✅ works | ✅ works | ✅ works | ✅ | 2026-11-14 |
 | 2.1.325 | win32-x64 | ✅ works | ✅ works | ✅ works | ✅ works | ✅ works | ✅ | 2026-11-14 |
 | 2.1.323 | darwin-arm64 | ✅ works | ✅ works | ✅ works | ✅ works | ✅ works | ✅ | 2026-11-13 |
 | 2.1.323 | win32-x64 | ✅ works | ✅ works | ✅ works | ✅ works | ✅ works | ✅ | 2026-11-13 |
